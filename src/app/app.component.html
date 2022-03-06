@@ -1,4 +1,4 @@
-<ng-container>
+<ng-container *ngIf="true">
   <app-header></app-header>
   <div class="router-container">
     <ng-container *ngIf="!appService.errorCode; else error">
@@ -11,7 +11,7 @@
   <app-footer></app-footer>
 </ng-container>
 
-<ng-container *ngIf="true">
+<ng-container *ngIf="false">
 
   <div class="main-loading-container">
     <div class="loading-spinner"></div>

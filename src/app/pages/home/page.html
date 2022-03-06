@@ -1,1 +1,52 @@
-home page
+
+
+
+<section class="chavo">
+  <div class="chavo-content">
+    <div class="chavo_title">Хронология событий</div>
+    <div class="chavo_desk">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident molestiae quaerat nesciunt nostrum ipsum
+      repellendus perspiciatis, incidunt eaque esse architecto reprehenderit eius excepturi fugiat ea at sapiente enim
+      corporis explicabo.
+    </div>
+    <div class="chavo_desk">
+        lorem lorem lorem lorem
+    </div>
+    <div class="chavo-fields" *ngFor="let chavo of chavoElems">
+        <div class="chavo-field" (click)="openChavo(chavo)">
+            <div class="chavo-field_title">{{chavo.title}}</div>
+            <!-- <div class="chavo-field_desk">{{chavo.desk}}</div> -->
+            <div class="chavo-field_data" *ngIf="chavo.show">{{chavo.data}}</div>
+        </div>
+    </div>
+    <div class="">Одним словом,</div>
+    <div class="">JUST FOR LULZ, КОНЕЧНО!</div>
+  </div>
+</section>
+
+
+<section class="site-pages">
+    <div class="site-pages-content">
+        <div class="site-pages_title">Описание страниц</div>
+        <div class="site-pages_desk">Тут можно узнать о страницах</div>
+        <div class="site-pages_about">Увидеть больше</div>
+        <div class="site-pages-links">
+            <div class="site-pages-link">
+                <div class="site-pages-link_title">Главная</div>
+                <div class="site-pages-link_content">Главная</div>
+            </div>
+            <div class="site-pages-link">
+                <div class="site-pages-link_title">Новости</div>
+                <div class="site-pages-link_content">Новости</div>
+            </div>
+            <div class="site-pages-link">
+                <div class="site-pages-link_title">Голосование</div>
+                <div class="site-pages-link_content">Голосование</div>
+            </div>
+            <div class="site-pages-link">
+                <div class="site-pages-link_title">Статьи</div>
+                <div class="site-pages-link_content">Статьи</div>
+            </div>
+        </div>
+    </div>
+</section>
