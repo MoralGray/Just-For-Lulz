@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 // import {MainComponent} from '../../core/main.component';
-// import {AppService} from '../../services/app.service';
-// import {NavigationService} from '../../services/navigation.service';
+import {AppService} from '../../services/app.service';
+import {NavigationService} from '../../services/navigation.service';
 // import {UserModelService} from '../../models/user.model.service';
 // import {TranslateService} from '@ngx-translate/core';
 
@@ -93,10 +93,37 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     },
   ];
 
+  pageBlockLinks = [
+    {
+      title: 'Главная',
+      content: 'Главная',
+      img: '',
+      url: '/'
+    },
+    {
+      title: 'Новости',
+      content: 'Новости',
+      img: '',
+      url: '/news'
+    },
+    {
+      title: 'Голосование',
+      content: 'Голосование',
+      img: '',
+      url: '/'
+    },
+    {
+      title: 'Статьи',
+      content: 'Статьи',
+      img: '',
+      url: '/'
+    },
+  ];
+
   constructor(
-    // appService: AppService,
+    appService: AppService,
     // translateService: TranslateService,
-    // navigationService: NavigationService,
+    navigationService: NavigationService,
     // userModelService: UserModelService,
   ) {
     // super(appService, translateService, navigationService, userModelService);

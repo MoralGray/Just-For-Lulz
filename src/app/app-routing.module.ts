@@ -14,6 +14,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/news/page.module').then(m => m.NewsPageModule),
     pathMatch: 'full'
   },
+  // {
+  //   path: 'about',
+  //   loadChildren: () => import('./pages/about/page.module').then(m => m.AboutPageModule),
+  //   pathMatch: 'full'
+  // },
   {
     path: '**',
     loadChildren: () => import('./pages/home/page.module').then(m => m.HomePageModule),
