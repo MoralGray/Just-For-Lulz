@@ -1,0 +1,20 @@
+<ng-container>
+  <app-header></app-header>
+  <div class="router-container">
+    <ng-container *ngIf="!appService.errorCode; else error">
+      <router-outlet></router-outlet>
+    </ng-container>
+    <ng-template #error>
+      <app-error-page></app-error-page>
+    </ng-template>
+  </div>
+  <app-footer></app-footer>
+</ng-container>
+
+<ng-container *ngIf="true">
+
+  <div class="main-loading-container">
+    <div class="loading-spinner"></div>
+  </div>
+
+</ng-container>

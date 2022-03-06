@@ -1,0 +1,38 @@
+<ng-container>
+  <div class="modal-wrapper gallery-popup" [ngClass]="{closing: closing}">
+    <div class="modal-backdrop" (click)="close()"></div>
+    <div class="modal-scroll-container">
+      <div class="modal-container">
+        <div class="modal-backdrop modal-backdrop--left" (click)="close()"></div>
+
+        <span class="modal-button_close" (click)="close()"></span>
+
+        <div class="gallery-popup-main">
+
+          <swiper #galleryImages [config]="swiperGalleryConfig" [index]="index">
+            <div class="gallery-popup-main-item" *ngFor="let item of album; index as i; index as index">
+              <img [src]="item.src"/>
+            </div>
+          </swiper>
+
+        </div>
+
+        <div class="gallery-popup-thumb">
+          <div class="modal-backdrop modal-backdrop--bottom" (click)="close()"></div>
+          <swiper
+            #galleryThumbs
+            [config]="swiperThumbConfig"
+            [index]="index"
+          >
+            <div class="gallery-popup-thumb-item" *ngFor="let item of album; index as i; index as index">
+              <img [src]="item.thumb"/>
+            </div>
+
+          </swiper>
+        </div>
+
+        <div class="modal-backdrop modal-backdrop--right" (click)="close()"></div>
+      </div>
+    </div>
+  </div>
+</ng-container>
