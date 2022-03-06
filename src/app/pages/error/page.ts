@@ -1,9 +1,7 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
-// import {MainComponent} from '../../core/main.component';
-// import {AppService} from '../../services/app.service';
-// import {NavigationService} from '../../services/navigation.service';
+import {AppService} from '../../services/app.service';
+import {NavigationService} from '../../services/navigation.service';
 // import {UserModelService} from '../../models/user.model.service';
-// import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-error-page',
@@ -12,13 +10,15 @@ import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 })
 export class ErrorPageComponent implements AfterViewInit, OnInit, AfterViewInit, OnDestroy {
 
+  appService: AppService;
+
   constructor(
-    // appService: AppService,
-    // translateService: TranslateService,
-    // navigationService: NavigationService,
+    appService: AppService,
+    navigationService: NavigationService,
     // userModelService: UserModelService,
   ) {
     // super(appService, translateService, navigationService, userModelService);
+    this.appService = appService;
   }
 
   ngAfterViewInit() {
@@ -26,9 +26,9 @@ export class ErrorPageComponent implements AfterViewInit, OnInit, AfterViewInit,
   }
 
   ngOnInit() {
-    // if (!this.appService.errorCode) {
-    //   this.appService.errorCode = 404;
-    // }
+    if (!this.appService.errorCode) {
+      this.appService.errorCode = 404;
+    }
   }
 
   ngOnDestroy() {

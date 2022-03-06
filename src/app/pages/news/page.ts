@@ -11,6 +11,7 @@ import {NavigationService} from '../../services/navigation.service';
 })
 export class NewsPageComponent implements AfterViewInit, OnInit, AfterViewInit, OnDestroy {
 
+  appService: AppService;
 
   filters = [
     'Все',
@@ -50,6 +51,7 @@ export class NewsPageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     // userModelService: UserModelService,
   ) {
     // super(appService, navigationService, userModelService);
+    this.appService = appService;
   }
 
   ngAfterViewInit() {
@@ -65,7 +67,7 @@ export class NewsPageComponent implements AfterViewInit, OnInit, AfterViewInit, 
   }
 
   filterSort(filter: string) {
-
+    this.appService.isLoading = false;
     if (filter === 'Все') {
       return this.fieldsSotred = this.fields;
     }

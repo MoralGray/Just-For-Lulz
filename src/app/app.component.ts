@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   // public userModelService: UserModelService;
   // public pagesModelService: PagesModelService;
 
-  private loading = 1;
+  private loading = 0;
 
   constructor(
     appService: AppService,
