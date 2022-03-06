@@ -6,6 +6,9 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-news-youtube',
   templateUrl: './item.html'
@@ -35,11 +38,11 @@ export class NewsYouTubeItemComponent implements OnDestroy, OnInit {
   }
 
   getVideosForChanel(channel: any, maxResults: number): Observable<Object> {
-  const url = 'https://www.googleapis.com/youtube/v3/search?key=' + this.apiKey + '&channelId=' + channel + '&order=date&part=snippet &type=video,id&maxResults=' + maxResults
-  return this.http.get(url)
-    .pipe(map((res) => {
-      console.log(res);
-      return res;
-    }));
+    const url = 'https://www.googleapis.com/youtube/v3/search?key=' + this.apiKey + '&channelId=' + channel + '&order=date&part=snippet &type=video,id&maxResults=' + maxResults
+    return this.http.get(url)
+      .pipe(map((res) => {
+        console.log(res);
+        return res;
+      }));
   }
 }

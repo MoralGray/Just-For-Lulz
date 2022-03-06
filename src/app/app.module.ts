@@ -7,7 +7,7 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {ComponentsModule} from './components/components.module';
 
-// import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 
 import {NgxMaskModule} from 'ngx-mask';
 // import {ToastrModule} from 'ngx-toastr';
@@ -28,6 +28,7 @@ import {ErrorPageModule} from './pages/error/page.module';
     // ToastrModule.forRoot(),
     NgxMaskModule.forRoot(),
     ErrorPageModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
