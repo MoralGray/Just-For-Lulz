@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
-// import {MainComponent} from '../../core/main.component';
-// import {AppService} from '../../services/app.service';
-// import {NavigationService} from '../../services/navigation.service';
+import {AppService} from '../../services/app.service';
+import {NavigationService} from '../../services/navigation.service';
 // import {UserModelService} from '../../models/user.model.service';
 // import {TranslateService} from '@ngx-translate/core';
 
@@ -46,12 +45,11 @@ export class NewsPageComponent implements AfterViewInit, OnInit, AfterViewInit, 
   ];
 
   constructor(
-    // appService: AppService,
-    // translateService: TranslateService,
-    // navigationService: NavigationService,
+    appService: AppService,
+    navigationService: NavigationService,
     // userModelService: UserModelService,
   ) {
-    // super(appService, translateService, navigationService, userModelService);
+    // super(appService, navigationService, userModelService);
   }
 
   ngAfterViewInit() {
