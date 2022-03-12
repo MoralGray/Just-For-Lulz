@@ -1,17 +1,19 @@
 <header>
   <div class="header-content">
-    <div class="header-left">
-      <div class="header-left_menu"></div>
-      <div class="header-left_logo"></div>
-    </div>
-    <div class="header-center">
-      <div class="header-center_link">
-        <p [routerLink]="['/']">Главная</p>
-        <p [routerLink]="['/news']">Новости</p>
+    <div class="header-content__container">
+      <div class="header-left">
+        <div class="header-left_menu"></div>
+        <div class="header-left_logo"><img src="https://www.domod.ru/upload/medialibrary/e99/1.png" alt="logo"></div>
       </div>
-    </div>
-    <div class="header-right">
-      <div class="header-right_user">Poehali</div>
+      <div class="header-center">
+        <div class="header-center_link">
+          <p [routerLink]="['/']">Главная</p>
+          <p [routerLink]="['/news']">Новости</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-right_user">Poehali</div>
+      </div>
     </div>
   </div>
 </header>

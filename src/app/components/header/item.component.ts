@@ -4,7 +4,8 @@ import {AppService} from '../../services/app.service';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './item.html'
+  templateUrl: './item.html',
+  styleUrls: ['./item.scss']
 })
 
 export class HeaderItemComponent implements OnDestroy, OnInit {
