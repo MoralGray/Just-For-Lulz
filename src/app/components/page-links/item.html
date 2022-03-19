@@ -1,13 +1,15 @@
 <section class="site-pages">
-  <div class="site-pages-content">
-      <div class="site-pages_title">Описание страниц</div>
-      <div class="site-pages_desk">Тут можно узнать о страницах</div>
-      <div class="site-pages_about">Увидеть больше</div>
-      <div class="site-pages-links" *ngFor="let link of links">
-          <div class="site-pages-link" [routerLink]="['/']">
-              <div class="site-pages-link_title">{{link.title}}</div>
-              <div class="site-pages-link_content">{{link.content}}</div>
-          </div>
-      </div>
-  </div>
+    <div class="site-pages__container">
+        <div class="site-pages-content">
+            <div class="site-pages_title">Описание страниц</div>
+            <div class="site-pages_desk">Тут можно узнать о страницах</div>
+            <div class="site-pages_about">Увидеть больше</div>
+            <div class="site-pages-links" *ngFor="let link of links">
+                <div class="site-pages-link" [routerLink]="['/']">
+                    <div class="site-pages-link_title">{{link.title}}</div>
+                    <div class="site-pages-link_content">{{link.content}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

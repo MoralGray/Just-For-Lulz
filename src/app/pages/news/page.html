@@ -1,15 +1,17 @@
 <section class="news">
-    <div class="news-content">
-        <div class="news-filters">
-            <ng-container *ngFor="let filter of filters">
-                <div class="news-filter" (click)="filterSort(filter)">{{filter}}</div>
-            </ng-container>
-        </div>
-        <div class="news-fields">
-            <div class="">{{fieldsSotred?.length}} материала</div>
-            <ng-container *ngFor="let field of fieldsSotred">
-                <div class="news-field_title">{{field?.title}}</div>
-            </ng-container>
+    <div class="news__container">
+        <div class="news-content">
+            <div class="news-filters">
+                <ng-container *ngFor="let filter of filters">
+                    <div class="news-filter" (click)="filterSort(filter)">{{filter}}</div>
+                </ng-container>
+            </div>
+            <div class="news-fields">
+                <div class="">{{fieldsSotred?.length}} материала</div>
+                <ng-container *ngFor="let field of fieldsSotred">
+                    <div class="news-field_title">{{field?.title}}</div>
+                </ng-container>
+            </div>
         </div>
     </div>
 </section>
