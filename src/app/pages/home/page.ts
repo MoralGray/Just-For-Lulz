@@ -154,8 +154,4 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
 
   }
 
-  openChavo(chavo: any) {
-    chavo.show = !chavo.show;
-  }
-
 }

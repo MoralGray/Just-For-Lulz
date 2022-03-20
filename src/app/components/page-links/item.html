@@ -1,9 +1,11 @@
 <section class="site-pages">
     <div class="site-pages__container">
         <div class="site-pages-content">
-            <div class="site-pages_title">Описание страниц</div>
-            <div class="site-pages_desk">Тут можно узнать о страницах</div>
-            <div class="site-pages_about">Увидеть больше</div>
+            <div class="site-pages-block-title site-pages-block-title--{{position}}">
+                <h2 class="site-pages_title">Описание страниц</h2>
+                <span class="site-pages_desk">Тут можно узнать о страницах</span>
+                <p class="site-pages_about">Увидеть больше</p>
+            </div>
             <div class="site-pages-links">
                 <ng-container *ngFor="let link of links; index as i">
                     <div class="site-pages-link  link--color-{{i}}" [routerLink]="['/']">

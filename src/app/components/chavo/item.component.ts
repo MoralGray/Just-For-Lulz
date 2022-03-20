@@ -3,15 +3,15 @@ import {AppService} from '../../services/app.service';
 // import {UserModelService} from '../../models/user.model.service';
 
 @Component({
-  selector: 'app-page-links',
+  selector: 'app-chavo',
   templateUrl: './item.html',
   styleUrls: ['./item.scss']
 })
 
-export class PageLinksItemComponent implements OnDestroy, OnInit {
+export class ChavoItemComponent implements OnDestroy, OnInit {
 
   @Input() position = 'left';
-  @Input() links: any;
+  @Input() data: any[] = [];
 
   appService: AppService;
 
@@ -28,4 +28,9 @@ export class PageLinksItemComponent implements OnDestroy, OnInit {
   ngOnDestroy() {
 
   }
+
+  openChavo(chavo: any) {
+    chavo.show = !chavo.show;
+  }
+  
 }
