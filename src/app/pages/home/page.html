@@ -1,3 +1,23 @@
-<app-chavo [data]="chavoElems"></app-chavo>
+<section class="site-pages">
+  <div class="site-pages__container">
+    <div class="site-pages-content">
 
-<app-page-links [links]="pageBlockLinks" [position]="'center'"></app-page-links>
+      <div class="site-pages-block-title site-pages-block-title--left">
+        <h2 class="site-pages_title">Хронология событий</h2>
+        <span class="site-pages_desk">
+          Манифест чаво, коротко о партии, частые вопросы.
+        </span>
+      </div>
+      <app-chavo [data]="chavoElems"></app-chavo>
+
+
+      <div class="site-pages-block-title site-pages-block-title--center">
+        <h2 class="site-pages_title">Описание страниц</h2>
+        <span class="site-pages_desk">Тут можно узнать о страницах</span>
+        <p class="site-pages_about">Увидеть больше</p>
+      </div>
+      <app-page-links [links]="pageBlockLinks" [position]="'center'"></app-page-links>
+      
+    </div>
+  </div>
+</section>
