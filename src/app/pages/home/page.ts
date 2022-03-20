@@ -294,6 +294,7 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     console.log('url', url);
 
     this.isLoadling = true;
+    this.mapMarkSelectedShowT = false;
     this.mapMarkSelectedShow = !this.mapMarkSelectedShow;
 
     fetch(url)
@@ -309,12 +310,16 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
       this.isLoadling = false;
       this.mapMarkSelectedShowT = true;
     });
+
+    console.log(this.mapMarkSelectedShow, this.mapMarkSelectedShowT)
   }
 
   clickOutsideHandler() {
-     if (this.mapMarkSelectedShow) {
+     if (this.mapMarkSelectedShowT) {
       this.mapMarkSelectedShow = false;
       this.mapMarkSelectedShowT = false;
+      console.log(this.mapMarkSelectedShow, this.mapMarkSelectedShowT)
     }
+    console.log(this.mapMarkSelectedShow, this.mapMarkSelectedShowT)
   }
 }
