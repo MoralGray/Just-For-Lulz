@@ -4,7 +4,8 @@ import {AppService} from '../../services/app.service';
 
 @Component({
   selector: 'app-page-links',
-  templateUrl: './item.html'
+  templateUrl: './item.html',
+  styleUrls: ['./item.scss']
 })
 
 export class PageLinksItemComponent implements OnDestroy, OnInit {

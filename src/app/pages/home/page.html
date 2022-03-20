@@ -16,7 +16,7 @@
       <div class="chavo-fields" *ngFor="let chavo of chavoElems">
           <div class="chavo-field" (click)="openChavo(chavo)">
               <div class="chavo-field_title">{{chavo.title}}</div>
-              <!-- <div class="chavo-field_desk">{{chavo.desk}}</div> -->
+              <div class="chavo-field_desk" *ngIf="chavo.deskShow">{{chavo.desk}}</div>
               <div class="chavo-field_data" *ngIf="chavo.show">{{chavo.data}}</div>
           </div>
       </div>
