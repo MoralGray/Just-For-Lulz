@@ -290,9 +290,6 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     const markUrl = this[objectType][id]?.url;
     const url = `https://jsonlink.io/api/extract?url=${markUrl}`;
 
-    console.log('markUrl', markUrl);
-    console.log('url', url);
-
     this.isLoadling = true;
     this.mapMarkSelectedShowT = false;
     this.mapMarkSelectedShow = !this.mapMarkSelectedShow;
@@ -302,7 +299,6 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       this.selectedMark.title = data.title;
       this.selectedMark.desk = data.description;
       this.selectedMark.imgUrl = data.images[0];
@@ -310,16 +306,12 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
       this.isLoadling = false;
       this.mapMarkSelectedShowT = true;
     });
-
-    console.log(this.mapMarkSelectedShow, this.mapMarkSelectedShowT)
   }
 
   clickOutsideHandler() {
      if (this.mapMarkSelectedShowT) {
       this.mapMarkSelectedShow = false;
       this.mapMarkSelectedShowT = false;
-      console.log(this.mapMarkSelectedShow, this.mapMarkSelectedShowT)
     }
-    console.log(this.mapMarkSelectedShow, this.mapMarkSelectedShowT)
   }
 }
