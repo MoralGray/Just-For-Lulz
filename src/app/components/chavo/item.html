@@ -1,23 +1,23 @@
 <section class="chavo">
-    <div class="chavo__container">
-      <div class="chavo-content">
-        <div class="site-pages-block-title site-pages-block-title--{{position}}">
-          <h2 class="site-pages_title">Хронология событий</h2>
-          <span class="site-pages_desk">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident molestiae quaerat nesciunt nostrum ipsum
-            repellendus perspiciatis, incidunt eaque esse architecto reprehenderit eius excepturi fugiat ea at sapiente
-            enim corporis explicabo.
-          </span>
-        </div>
-        <div class="chavo-fields" *ngFor="let chavo of data">
-          <div class="chavo-field">
-            <div class="chavo-field_title" (click)="openChavo(chavo)">{{chavo.title}}</div>
-            <div class="chavo-field_desk" *ngIf="chavo.deskShow">{{chavo.desk}}</div>
-            <div class="chavo-field_data" *ngIf="chavo.show">{{chavo.data}}</div>
-          </div>
-        </div>
-        <div class="">Одним словом,</div>
-        <div class="">JUST FOR LULZ, КОНЕЧНО!</div>
+  <div class="chavo__container">
+    <div class="chavo-content">
+      <div class="site-pages-block-title site-pages-block-title--{{position}}">
+        <h2 class="site-pages_title">Хронология событий</h2>
+        <span class="site-pages_desk">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident molestiae quaerat nesciunt nostrum ipsum
+          repellendus perspiciatis, incidunt eaque esse architecto reprehenderit eius excepturi fugiat ea at sapiente
+          enim corporis explicabo.
+        </span>
       </div>
+      <div class="chavo-fields" *ngFor="let chavo of data">
+        <div class="chavo-field">
+          <div class="chavo-field_title" (click)="openChavo(chavo)">{{chavo.title}}</div>
+          <div class="chavo-field_desk" *ngIf="chavo.deskShow">{{chavo.desk}}</div>
+          <div class="chavo-field_data" *ngIf="chavo.show">{{chavo.data}}</div>
+        </div>
+      </div>
+      <div class="">Одним словом,</div>
+      <div class="">JUST FOR LULZ, КОНЕЧНО!</div>
     </div>
-  </section>
+  </div>
+</section>
