@@ -59,6 +59,7 @@ button {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px) {
+
   input,
   input:focus,
   input:active,
@@ -108,7 +109,6 @@ input:checked {
   -moz-appearance: none;
   appearance: none;
 }
-
 
 a:focus,
 a:active {
@@ -225,3 +225,48 @@ h6 {
     transform: rotate(360deg);
   }
 }
+
+/* Map logo & copyright */
+a[href^="http://maps.google.com/maps"] {
+  display: none !important
+}
+
+a[href^="https://maps.google.com/maps"] {
+  display: none !important
+}
+
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+  display: none;
+}
+
+a[href^="https://maps.google.com/maps"] {
+  display: block !important;
+  position: relative;
+  margin-left: 15px;
+}
+
+/* .gmnoprint {
+  margin-left: -10px;
+}
+
+.gm-fullscreen-control {
+  left: calc(100% - 70px);
+}
+
+.gmnoprint:nth-child(3) {
+  left: calc(100% - 130px);
+}
+
+.gmnoprint:nth-child(2) {
+  left: calc(100% - 270px);
+}
+
+.gmnoprint:nth-child(1) div:nth-child(1) div:nth-child(1) div {
+  left: auto;
+}
+
+.gmnoprint:nth-child(1) div {
+  left: calc(100% - 120px);
+} */
