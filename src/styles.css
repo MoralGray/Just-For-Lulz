@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap);
 
-
 * {
   padding: 0px;
   margin: 0px;
@@ -15,11 +14,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :focus,
 :active {
   outline: none;
 }
-
 
 input,
 input:focus,
