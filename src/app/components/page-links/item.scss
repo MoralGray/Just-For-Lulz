@@ -17,23 +17,28 @@
 
 .site-pages_title {}
 
-.link--color-1 {
+.link--color-0 {
   background-color: #6AC180;
 }
 
-.link--color-2 {
+.link--color-1 {
   background-color: #FEC12B;
 }
 
-.link--color-3 {
+.link--color-2 {
   background-color: #00AEEF;
 }
 
-.link--color-4 {
+.link--color-3 {
   background-color: #E21E26;
 }
 
-.site-pages-link {}
+.site-pages-links {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
 
 .site-pages-link::before {
   content: "";
