@@ -17,6 +17,27 @@
 
 .site-pages_title {}
 
-.site-pages-links:nth-child(1) {
+.link--color-1 {
   background-color: #6AC180;
+}
+
+.link--color-2 {
+  background-color: #FEC12B;
+}
+
+.link--color-3 {
+  background-color: #00AEEF;
+}
+
+.link--color-4 {
+  background-color: #E21E26;
+}
+
+.site-pages-link {}
+
+.site-pages-link::before {
+  content: "";
+  background-image: ulr();
+  background-repeat: no-repeat;
+  background-size: cover;
 }

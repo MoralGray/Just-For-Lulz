@@ -4,11 +4,13 @@
             <div class="site-pages_title">Описание страниц</div>
             <div class="site-pages_desk">Тут можно узнать о страницах</div>
             <div class="site-pages_about">Увидеть больше</div>
-            <div class="site-pages-links" *ngFor="let link of links">
-                <div class="site-pages-link" [routerLink]="['/']">
-                    <div class="site-pages-link_title">{{link.title}}</div>
-                    <div class="site-pages-link_content">{{link.content}}</div>
-                </div>
+            <div class="site-pages-links">
+                <ng-container *ngFor="let link of links; index as i">
+                    <div class="site-pages-link  link--color-{{i}}" [routerLink]="['/']">
+                        <div class="site-pages-link_title">{{link.title}}</div>
+                        <div class="site-pages-link_content">{{link.content}}</div>
+                    </div>
+                </ng-container>
             </div>
         </div>
     </div>
