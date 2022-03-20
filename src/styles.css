@@ -285,8 +285,13 @@ h6 {
   color: #000000;
 }
 
+.site-page-map-wrapper {}
 
 /* Map logo & copyright */
+agm-map {
+  height: 400px
+}
+
 a[href^="http://maps.google.com/maps"] {
   display: none !important;
 }

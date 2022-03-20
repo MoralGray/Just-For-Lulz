@@ -2,6 +2,37 @@
   <div class="site-pages__container">
     <div class="site-pages-content">
 
+      <div class="site-page-map-wrapper">
+        <agm-map 
+          [latitude]="mapEurope[0]"
+          [longitude]="mapEurope[1]"
+          [zoom]="3" 
+          [disableDefaultUI]="true">
+
+          <agm-fullscreen-control></agm-fullscreen-control>
+          <agm-zoom-control></agm-zoom-control>
+
+          <ng-container *ngFor="let mark of mapTgMarks">
+            <agm-marker 
+              [latitude]="mark.lat" 
+              [longitude]="mark.long" 
+              [iconUrl]="'assets/icons/tg_icon.png'"
+              (markerClick)="openTgMap(mark.id)">
+            </agm-marker>
+          </ng-container>
+          
+          <ng-container *ngFor="let mark of mapUsersMarks">
+            <agm-marker 
+              [latitude]="mark.lat" 
+              [longitude]="mark.long" 
+              [iconUrl]="iconUrl"
+              (markerClick)="openTgMap(mark.id)">
+            </agm-marker>
+          </ng-container>
+
+        </agm-map>
+      </div>
+
       <div class="site-pages-block-title site-pages-block-title--left">
         <h2 class="site-pages_title">Хронология событий</h2>
         <span class="site-pages_desk">
@@ -17,7 +48,7 @@
         <p class="site-pages_about">Увидеть больше</p>
       </div>
       <app-page-links [links]="pageBlockLinks" [position]="'center'"></app-page-links>
-      
+
     </div>
   </div>
 </section>

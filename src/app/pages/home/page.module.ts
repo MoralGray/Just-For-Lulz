@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {PageLinksItemComponent} from '../../components/page-links/item.component';
 import {ChavoItemComponent} from '../../components/chavo/item.component';
+import { AgmCoreModule } from '@agm/core';
 
 import {HomePageComponent} from './page';
 
@@ -17,6 +18,9 @@ import {HomePageComponent} from './page';
         component: HomePageComponent
       }
     ]),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBP9AinsakmuPkSRbQ6AqQG_Y1ecfbVYeY'
+    })
   ],
   declarations: [HomePageComponent, PageLinksItemComponent, ChavoItemComponent]
 })

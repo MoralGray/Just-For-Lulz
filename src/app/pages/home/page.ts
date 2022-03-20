@@ -133,6 +133,100 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     },
   ];
 
+  mapEurope: any = [52.500000, 23.383333];
+
+  mapTgMarks = [
+    {
+      id: 0,
+      title: 'Региональное отделение',
+      url: 'https://t.me/justforlulz2ch',
+      desk: 'Конференция телеграма на планете земля',
+      lat: 67.88147,
+      long: 131.76099,
+    },
+    {
+      id: 1,
+      title: 'Региональное отделение',
+      url: 'https://t.me/justforlulz2ch',
+      desk: 'Конференция телеграма на планете земля',
+      lat: 33.41402,
+      long: 15.29929,
+    },
+    {
+      id: 2,
+      title: 'Региональное отделение',
+      url: 'https://t.me/justforlulz2ch',
+      desk: 'Конференция телеграма на планете земля',
+      lat: 29.91398,
+      long: 11.07895,
+    },
+    {
+      id: 3,
+      title: 'Региональное отделение',
+      url: 'https://t.me/justforlulz2ch',
+      desk: 'Конференция телеграма на планете земля',
+      lat: 13.91398,
+      long: 173.07895,
+    },
+    {
+      id: 4,
+      title: 'Региональное отделение',
+      url: 'https://t.me/justforlulz2ch',
+      desk: 'Конференция телеграма на планете земля',
+      lat: 41.91398,
+      long: -44.07895,
+    },
+    {
+      id: 5,
+      title: 'Региональное отделение',
+      url: 'https://t.me/justforlulz2ch',
+      desk: 'Конференция телеграма на планете земля',
+      lat: 19.91398,
+      long: -27.07895,
+    }
+  ];
+
+  mapUsersMarks = [
+    {
+      id: 0,
+      lat: 67.88147,
+      long: 131.76099,
+    },
+    {
+      id: 1,
+      lat: 36.41402,
+      long: 115.29929,
+    },
+    {
+      id: 2,
+      lat: 29.91398,
+      long: -77.07895,
+    },
+    {
+      id: 3,
+      lat: 19.91398,
+      long: -73.07895,
+    },
+    {
+      id: 4,
+      lat: 21.91398,
+      long: -67.07895,
+    },
+    {
+      id: 5,
+      lat: 49.91398,
+      long: -17.07895,
+    }
+  ];
+
+  iconUrl: any = {
+    url: 'assets/icons/user_map.png',
+    scaledSize: {
+      width: 25,
+      height: 40
+    }
+  };
+
   constructor(
     appService: AppService,
     // translateService: TranslateService,
@@ -152,6 +246,20 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
 
   ngOnDestroy() {
 
+  }
+
+  openTgMap(id: number) {
+    const markUrl = this.mapTgMarks[id]?.url;
+    console.log('markUrl', markUrl);
+    const url = `https://jsonlink.io/api/extract?url=${markUrl}`;
+    console.log('url', url);
+    fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
   }
 
 }
