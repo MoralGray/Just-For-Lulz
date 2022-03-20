@@ -2,8 +2,8 @@
   <div class="chavo-content">
     <div class="chavo-fields">
       <ng-container *ngFor="let chavo of data">
-        <div class="chavo-field">
-          <h2 class="chavo-field_title" (click)="openChavo(chavo)">{{chavo.title}}</h2>
+        <div class="chavo-field" (click)="openChavo(chavo)">
+          <h2 class="chavo-field_title">{{chavo.title}}</h2>
           <div class="chavo-field_desk" *ngIf="chavo.deskShow">{{chavo.data}}</div>
           <div class="chavo-field_data" *ngIf="chavo.show">{{chavo.data}}</div>
         </div>
