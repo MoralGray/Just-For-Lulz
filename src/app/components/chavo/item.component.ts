@@ -30,6 +30,7 @@ export class ChavoItemComponent implements OnDestroy, OnInit {
   }
 
   openChavo(chavo: any) {
+    chavo.deskShow = !chavo.deskShow;
     chavo.show = !chavo.show;
   }
 
