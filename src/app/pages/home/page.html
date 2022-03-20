@@ -7,10 +7,12 @@
           [latitude]="mapEurope[0]"
           [longitude]="mapEurope[1]"
           [zoom]="3" 
-          [disableDefaultUI]="true">
+          [disableDefaultUI]="true"
+          (mapClick)="openMarkerModal($event)">
 
-          <agm-fullscreen-control *ngIf="!mapMarkSelectedShow"></agm-fullscreen-control>
-          <agm-zoom-control *ngIf="!mapMarkSelectedShow"></agm-zoom-control>
+          <!-- В agm_map v 3.beta есть ошибка с $event, возвращает не евент, а "с". -->
+          <!-- <agm-fullscreen-control *ngIf="!mapMarkSelectedShow"></agm-fullscreen-control> -->
+          <!-- <agm-zoom-control *ngIf="!mapMarkSelectedShow"></agm-zoom-control> -->
 
           <ng-container *ngFor="let mark of mapTgMarks">
             <agm-marker 
@@ -33,7 +35,7 @@
 
         </agm-map>
 
-        <div class="map-selected" *ngIf="mapMarkSelectedShow"  (clickOutside)="mapMarkSelectedShowT ? clickOutsideHandler() : ''">
+        <div class="map-selected" *ngIf="mapMarkSelectedShow"  (clickOutside)="mapMarkSelectedShowT ? clickOutsideHandler('mapMarkSelectedShowT') : ''">
             <div class="map-selected-content" *ngIf="!isLoadling">
               <img class="map-selected_img" src="{{selectedMark.imgUrl}}">
               <h2 class="map-selected_title">{{selectedMark.title}}</h2>
@@ -45,6 +47,36 @@
               <div class="loading-spinner"></div>
             </div>
         </div>
+
+        <div class="map-about" *ngIf="!isAboutMapShow" (click)="openAboutMap()">
+          <div class="map-about-content">
+            <img src="assets/icons/about_map.png" alt="About map?">
+          </div>
+        </div>
+
+        <div class="map-about-text" *ngIf="isAboutMapShow">
+          <div class="map-about-text-content">
+            <img src="assets/icons/galka_black.png" alt="Окей" (click)="openAboutMap()">
+            <h2>Карта членов партии</h2>
+            <span>Карта необходима, правда я не уверен зачем. (Нужен красивый текст)</span>
+            <p>Тут можно тыкнуть дважды и добавить метку.</p>
+          </div>
+        </div>
+
+        <div class="map-about-text" *ngIf="mapNewMarkIsShow">
+          <div class="map-about-text-content">
+            <img src="assets/icons/galka_black.png" alt="Окей" (click)="openMarkerModal(null)">
+            <h2>Желаете поставить новую метку?</h2>
+            <span>Для новой метки необходим телеграм аккаунт или почта!</span>
+            <p>Добавьте необходимые поля и метка появится на карте.</p>
+            <br>
+            <input type="text" placeholder="Почта">
+            <span>Или</span>
+            <input type="text" placeholder="Телеграм">
+            <button>Готово!</button>
+          </div>
+        </div>
+
       </div>
 
       <div class="site-pages-block-title site-pages-block-title--left">

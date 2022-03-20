@@ -15,6 +15,9 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
   isLoadling = false;
   mapMarkSelectedShow = false;
   mapMarkSelectedShowT = false;
+  isAboutMapShow = false;
+  isAboutMapShowT = false;
+  mapNewMarkIsShow = false;
 
   chavoElems = [
     {
@@ -196,48 +199,48 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
       title: 'Член партии',
       url: 'https://t.me/Petrychka',
       desk: '',
-      lat: 67.88147,
-      long: 131.76099,
+      lat: 57.88147,
+      long: 101.76099,
     },
     {
       id: 1,
       title: 'Член партии',
       url: 'https://t.me/AplleDianaOchka',
       desk: '',
-      lat: 36.41402,
-      long: 115.29929,
+      lat: 37.88147,
+      long: 111.76099,
     },
     {
       id: 2,
       title: 'Член партии',
       url: 'https://t.me/MoralGray',
       desk: '',
-      lat: 29.91398,
-      long: -77.07895,
+      lat: 50.88147,
+      long: 30.76099,
     },
     {
       id: 3,
       title: 'Член партии',
       url: 'https://t.me/Dukhan1n',
       desk: '',
-      lat: 19.91398,
-      long: -73.07895,
+      lat: 57.88147,
+      long: 51.76099,
     },
     {
       id: 4,
       title: 'Член партии',
       url: 'https://t.me/yours_truly_confused_N10',
       desk: '',
-      lat: 21.91398,
-      long: -67.07895,
+      lat: 51.88147,
+      long: 81.76099,
     },
     {
       id: 5,
       title: 'Член партии',
       url: 'https://t.me/sashashlyapik',
       desk: '',
-      lat: 49.91398,
-      long: -17.07895,
+      lat: 57.88147,
+      long: 201.76099,
     }
   ];
 
@@ -308,10 +311,36 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     });
   }
 
-  clickOutsideHandler() {
-     if (this.mapMarkSelectedShowT) {
+  openAboutMap() {
+    this.isAboutMapShow = !this.isAboutMapShow;
+    this.isAboutMapShowT = false;
+  }
+
+  clickOutsideHandler(key: any) {
+    if (key === 'mapMarkSelectedShowT' && this.mapMarkSelectedShowT) {
       this.mapMarkSelectedShow = false;
       this.mapMarkSelectedShowT = false;
+      return;
     }
   }
+
+  openMarkerModal($event: any) {
+    if ($event) {
+      console.log('e', $event);
+
+      this.mapNewMarkIsShow = true;
+
+      this.mapUsersMarks.push({
+        id: Number(new Date()),
+        title: 'Член партии',
+        url: 'https://t.me/sashashlyapik',
+        desk: '',
+        lat: $event.coords.lat,
+        long: $event.coords.long,
+      });
+    } else {
+      this.mapNewMarkIsShow = false;
+    }
+  }
+
 }

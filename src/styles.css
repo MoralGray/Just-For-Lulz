@@ -292,16 +292,19 @@ h6 {
   overflow: hidden;
 }
 
+.map-about-text,
 .map-selected {
   position: absolute;
   top: 0px;
   left: calc(100% - 40% + 1px);
   width: 40%;
-  background-color: #ffffffd1;
+  background-color: #ffffffe0;
   height: 100%;
   overflow: auto
 }
 
+.map-about::before,
+.map-about-text::before,
 .map-selected::before {
   content: "";
   background-image: url(assets/icons/logo_black.png);
@@ -314,6 +317,7 @@ h6 {
   position: absolute;
 }
 
+.map-about-text-content,
 .map-selected-content {
   display: grid;
   flex-direction: column;
@@ -322,6 +326,7 @@ h6 {
   margin: auto;
 }
 
+.map-about-text h2,
 .map-selected .map-selected_title {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -332,6 +337,7 @@ h6 {
   color: #000;
 }
 
+.map-about-text span,
 .map-selected .map-selected_desk {
   display: inline-block;
   font-style: normal;
@@ -341,6 +347,7 @@ h6 {
   color: #00000080;
   padding: 15px;
   padding-top: 0px;
+  padding-left: 0px;
 }
 
 .map-selected .map-selected_img {
@@ -367,6 +374,36 @@ h6 {
 
 .map-selected .map-selected_url:hover {
   border-bottom: 1px solid #000;
+}
+
+.map-about {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 25px;
+  padding: 5px;
+}
+
+.map-about img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.map-about-text {
+  left: 0px;
+}
+
+.map-about-text h2 {
+  padding-top: 40px;
+}
+
+.map-about-text img {
+  position: absolute;
+  top: 20px;
+  left: calc(100% - 50px);
+  padding: 10x;
+  width: 17px;
+  box-sizing: content-box;
+  cursor: pointer;
 }
 
 agm-map {
