@@ -12,6 +12,10 @@ import {NavigationService} from '../../services/navigation.service';
 })
 export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, OnDestroy {
 
+  isLoadling = false;
+  mapMarkSelectedShow = false;
+  mapMarkSelectedShowT = false;
+
   chavoElems = [
     {
       title: 'Хто я?',
@@ -140,7 +144,7 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
       id: 0,
       title: 'Региональное отделение',
       url: 'https://t.me/justforlulz2ch',
-      desk: 'Конференция телеграма на планете земля',
+      desk: '',
       lat: 67.88147,
       long: 131.76099,
     },
@@ -148,15 +152,15 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
       id: 1,
       title: 'Региональное отделение',
       url: 'https://t.me/justforlulz2ch',
-      desk: 'Конференция телеграма на планете земля',
+      desk: '',
       lat: 33.41402,
       long: 15.29929,
     },
     {
       id: 2,
       title: 'Региональное отделение',
-      url: 'https://t.me/justforlulz2ch',
-      desk: 'Конференция телеграма на планете земля',
+      url: 'https://t.me/justforlulz2chchanel',
+      desk: '',
       lat: 29.91398,
       long: 11.07895,
     },
@@ -164,15 +168,15 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
       id: 3,
       title: 'Региональное отделение',
       url: 'https://t.me/justforlulz2ch',
-      desk: 'Конференция телеграма на планете земля',
+      desk: '',
       lat: 13.91398,
       long: 173.07895,
     },
     {
       id: 4,
       title: 'Региональное отделение',
-      url: 'https://t.me/justforlulz2ch',
-      desk: 'Конференция телеграма на планете земля',
+      url: 'https://t.me/justforlulz2chchanel',
+      desk: '',
       lat: 41.91398,
       long: -44.07895,
     },
@@ -180,7 +184,7 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
       id: 5,
       title: 'Региональное отделение',
       url: 'https://t.me/justforlulz2ch',
-      desk: 'Конференция телеграма на планете земля',
+      desk: '',
       lat: 19.91398,
       long: -27.07895,
     }
@@ -189,42 +193,75 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
   mapUsersMarks = [
     {
       id: 0,
+      title: 'Член партии',
+      url: 'https://t.me/Petrychka',
+      desk: '',
       lat: 67.88147,
       long: 131.76099,
     },
     {
       id: 1,
+      title: 'Член партии',
+      url: 'https://t.me/AplleDianaOchka',
+      desk: '',
       lat: 36.41402,
       long: 115.29929,
     },
     {
       id: 2,
+      title: 'Член партии',
+      url: 'https://t.me/MoralGray',
+      desk: '',
       lat: 29.91398,
       long: -77.07895,
     },
     {
       id: 3,
+      title: 'Член партии',
+      url: 'https://t.me/Dukhan1n',
+      desk: '',
       lat: 19.91398,
       long: -73.07895,
     },
     {
       id: 4,
+      title: 'Член партии',
+      url: 'https://t.me/yours_truly_confused_N10',
+      desk: '',
       lat: 21.91398,
       long: -67.07895,
     },
     {
       id: 5,
+      title: 'Член партии',
+      url: 'https://t.me/sashashlyapik',
+      desk: '',
       lat: 49.91398,
       long: -17.07895,
     }
   ];
 
-  iconUrl: any = {
+  iconTgMap: any = {
+    url: 'assets/icons/tg_icon.png',
+    scaledSize: {
+      width: 24,
+      height: 24
+    }
+  };
+
+  iconUserMap: any = {
     url: 'assets/icons/user_map.png',
     scaledSize: {
       width: 25,
       height: 40
     }
+  };
+
+  selectedMark = {
+    title: '',
+    desk: '',
+    imgUrl: '',
+    url: '',
   };
 
   constructor(
@@ -248,18 +285,36 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
 
   }
 
-  openTgMap(id: number) {
-    const markUrl = this.mapTgMarks[id]?.url;
-    console.log('markUrl', markUrl);
+  openTgMap(id: number, type: string) {
+    const objectType = type === 'user' ? 'mapUsersMarks' : 'mapTgMarks';
+    const markUrl = this[objectType][id]?.url;
     const url = `https://jsonlink.io/api/extract?url=${markUrl}`;
+
+    console.log('markUrl', markUrl);
     console.log('url', url);
+
+    this.isLoadling = true;
+    this.mapMarkSelectedShow = !this.mapMarkSelectedShow;
+
     fetch(url)
     .then((response) => {
       return response.json();
     })
     .then((data) => {
       console.log(data);
+      this.selectedMark.title = data.title;
+      this.selectedMark.desk = data.description;
+      this.selectedMark.imgUrl = data.images[0];
+      this.selectedMark.url = data.url;
+      this.isLoadling = false;
+      this.mapMarkSelectedShowT = true;
     });
   }
 
+  clickOutsideHandler() {
+     if (this.mapMarkSelectedShow) {
+      this.mapMarkSelectedShow = false;
+      this.mapMarkSelectedShowT = false;
+    }
+  }
 }

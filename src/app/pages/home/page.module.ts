@@ -5,6 +5,7 @@ import {RouterModule} from '@angular/router';
 import {PageLinksItemComponent} from '../../components/page-links/item.component';
 import {ChavoItemComponent} from '../../components/chavo/item.component';
 import { AgmCoreModule } from '@agm/core';
+import {ClickOutsideModule} from 'ng-click-outside';
 
 import {HomePageComponent} from './page';
 
@@ -12,6 +13,7 @@ import {HomePageComponent} from './page';
   imports: [
     CommonModule,
     FormsModule,
+    ClickOutsideModule,
     RouterModule.forChild([
       {
         path: '',

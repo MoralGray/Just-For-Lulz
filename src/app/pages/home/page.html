@@ -2,35 +2,49 @@
   <div class="site-pages__container">
     <div class="site-pages-content">
 
-      <div class="site-page-map-wrapper">
+        <div class="site-page-map-wrapper">
         <agm-map 
           [latitude]="mapEurope[0]"
           [longitude]="mapEurope[1]"
           [zoom]="3" 
           [disableDefaultUI]="true">
 
-          <agm-fullscreen-control></agm-fullscreen-control>
-          <agm-zoom-control></agm-zoom-control>
+          <agm-fullscreen-control *ngIf="!mapMarkSelectedShow"></agm-fullscreen-control>
+          <agm-zoom-control *ngIf="!mapMarkSelectedShow"></agm-zoom-control>
 
           <ng-container *ngFor="let mark of mapTgMarks">
             <agm-marker 
-              [latitude]="mark.lat" 
-              [longitude]="mark.long" 
+              [latitude]="mark.lat"
+              [longitude]="mark.long"
               [iconUrl]="'assets/icons/tg_icon.png'"
-              (markerClick)="openTgMap(mark.id)">
+              [iconUrl]="iconTgMap"
+              (markerClick)="openTgMap(mark.id, 'tg')">
             </agm-marker>
           </ng-container>
-          
+
           <ng-container *ngFor="let mark of mapUsersMarks">
             <agm-marker 
-              [latitude]="mark.lat" 
-              [longitude]="mark.long" 
-              [iconUrl]="iconUrl"
-              (markerClick)="openTgMap(mark.id)">
+              [latitude]="mark.lat"
+              [longitude]="mark.long"
+              [iconUrl]="iconUserMap"
+              (markerClick)="openTgMap(mark.id, 'user')">
             </agm-marker>
           </ng-container>
 
         </agm-map>
+
+        <div class="map-selected" *ngIf="mapMarkSelectedShow"  (clickOutside)="mapMarkSelectedShowT ? clickOutsideHandler() : ''">
+            <div class="map-selected-content" *ngIf="!isLoadling">
+              <img class="map-selected_img" src="{{selectedMark.imgUrl}}">
+              <h2 class="map-selected_title">{{selectedMark.title}}</h2>
+              <span class="map-selected_desk">{{selectedMark.desk}}</span>
+              <a class="map-selected_url" href="{{selectedMark.url}}">Ссылка: {{selectedMark.url}}</a>
+            </div>
+
+            <div class="main-loading-container" *ngIf="isLoadling">
+              <div class="loading-spinner"></div>
+            </div>
+        </div>
       </div>
 
       <div class="site-pages-block-title site-pages-block-title--left">
