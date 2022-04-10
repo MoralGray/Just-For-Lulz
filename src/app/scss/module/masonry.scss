@@ -1,0 +1,71 @@
+.masonry {
+	width: 100%;
+	min-width: 680px;
+	max-width: 680px;
+
+
+	&__title, &__date {
+		transition: 250ms all ease-in-out;
+	}
+	&__title {
+		color: #020c22;
+	}
+	&__date {
+		color: #606778;
+		margin-bottom: 25px	;
+	}
+
+	&__item {
+		display: block;
+		max-width: 100%;
+		cursor: pointer;
+		flex-direction: column;
+		flex: .45;
+		height: 440px;
+
+		h3 {
+			height: 121px;
+			margin-bottom: 10px;
+			font-size: 24px;
+		}
+
+		&:hover h3 {
+			color: #0a3fb4;
+		}
+	}
+
+	&__item--large {
+		height: 552px;
+		margin-bottom: 42px;
+		max-width: 100%;
+		width: 680px;
+
+		h3 {
+			height: fit-content;
+		}
+	}
+
+	&__item--large &__title {
+		font-size: 32px;
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+
+	&__preview {
+		width: 100%;
+		height: 220px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__item--large &__preview {
+		height: 420px;
+	}
+
+	&__row {
+		max-width: 100%;
+		width: 680px;
+		justify-content: space-between;
+		display: inline-flex;
+	}
+}

@@ -1,0 +1,49 @@
+.section {
+	margin-top: 40px;
+	max-width: 680px;
+	min-width: 680px;
+
+	&__header {
+		display: block;
+		margin-bottom: 55px;
+		min-width: 680px;
+		cursor: pointer;
+	}
+
+
+	&__header--open &__title::before {
+		content: "";
+		display: block;
+		background-repeat: no-repeat;
+		background-position:center;
+		background-size: contain;
+		width: 26px;
+		min-width: 26px;
+		height: 26px;
+		min-height: 26px;
+		background-image: url("../../images/icons/other_icons/arrow_up.svg");
+		transform: rotate(180deg);
+		border-radius: 50%;
+		transition: 250ms all ease-in-out;
+		position: absolute;
+		margin-left: -50px;
+		margin-top: -3px;
+	}
+
+	&__header--open:hover > &__title::before {
+		background-image: url("../../images/icons/other_icons/arrow_up_hover.svg");
+		transform: none;
+	}
+
+	&__title {
+		font-size: 20px;
+		color: #0a3fb4;
+		font-weight: 500;
+	}
+
+	&--sites {
+		width: 100%;
+		background: #e2e3e4;
+		max-width: 100%;
+	}
+}

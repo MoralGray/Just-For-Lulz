@@ -19,8 +19,104 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
   isAboutMapShowT = false;
   mapNewMarkIsShow = false;
 
-  chavoElems = [
+  mapTheme: any[] = [{
+      "stylers": [{
+          "saturation": -100
+        },
+        {
+          "gamma": 1
+        }
+      ]
+    },
     {
+      "elementType": "labels.text.stroke",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    },
+    {
+      "featureType": "poi.business",
+      "elementType": "labels.text",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    },
+    {
+      "featureType": "poi.business",
+      "elementType": "labels.icon",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    },
+    {
+      "featureType": "poi.place_of_worship",
+      "elementType": "labels.text",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    },
+    {
+      "featureType": "poi.place_of_worship",
+      "elementType": "labels.icon",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    },
+    {
+      "featureType": "road",
+      "elementType": "geometry",
+      "stylers": [{
+        "visibility": "simplified"
+      }]
+    },
+    {
+      "featureType": "water",
+      "stylers": [{
+          "visibility": "on"
+        },
+        {
+          "saturation": 50
+        },
+        {
+          "gamma": 0
+        },
+        {
+          "hue": "#50a5d1"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative.neighborhood",
+      "elementType": "labels.text.fill",
+      "stylers": [{
+        "color": "#333333"
+      }]
+    },
+    {
+      "featureType": "road.local",
+      "elementType": "labels.text",
+      "stylers": [{
+          "weight": 0.5
+        },
+        {
+          "color": "#333333"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.station",
+      "elementType": "labels.icon",
+      "stylers": [{
+          "gamma": 1
+        },
+        {
+          "saturation": 50
+        }
+      ]
+    }
+  ]
+
+  chavoElems = [{
       title: 'Хто я?',
       desk: 'Гречневый заводчанин',
       data: 'Гречневый заводчанин, студент, успешный адвокат, ассенизатор, обычная домохозяйка, майор КГБ, 300к-программист или телохранитель Путина. Неважно. Теперь ты сторонник Всероссийской маргинальной политической партии «Поехали!». Наше движение неразрывно связано с принципом сетевой анонимности, так что при желании ты можешь поддержать нас, не раскрывая свою личность. Учитывая анонимный характер выборов, ты ничем не рискуешь, предоставляя нам свой голос. Либо ты можешь быть просто нашим сторонником и приносить пользу партии, формально не вступая в неё.',
@@ -113,8 +209,7 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     },
   ];
 
-  pageBlockLinks = [
-    {
+  pageBlockLinks = [{
       title: 'Главная',
       content: 'Главная',
       img: '',
@@ -142,8 +237,7 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
 
   mapEurope: any = [52.500000, 23.383333];
 
-  mapTgMarks = [
-    {
+  mapTgMarks = [{
       id: 0,
       title: 'Региональное отделение',
       url: 'https://t.me/justforlulz2ch',
@@ -193,8 +287,7 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     }
   ];
 
-  mapUsersMarks = [
-    {
+  mapUsersMarks = [{
       id: 0,
       title: 'Член партии',
       url: 'https://t.me/Petrychka',
@@ -289,6 +382,8 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
   }
 
   openTgMap(id: number, type: string) {
+    console.log('id', id)
+    console.log('type', type)
     const objectType = type === 'user' ? 'mapUsersMarks' : 'mapTgMarks';
     const markUrl = this[objectType][id]?.url;
     const url = `https://jsonlink.io/api/extract?url=${markUrl}`;
@@ -298,17 +393,18 @@ export class HomePageComponent implements AfterViewInit, OnInit, AfterViewInit, 
     this.mapMarkSelectedShow = !this.mapMarkSelectedShow;
 
     fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      this.selectedMark.title = data.title;
-      this.selectedMark.desk = data.description;
-      this.selectedMark.imgUrl = data.images[0];
-      this.selectedMark.url = data.url;
-      this.isLoadling = false;
-      this.mapMarkSelectedShowT = true;
-    });
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.selectedMark.title = data.title;
+        this.selectedMark.desk = data.description;
+        this.selectedMark.imgUrl = data.images[0];
+        this.selectedMark.url = data.url;
+        this.isLoadling = false;
+        this.mapMarkSelectedShowT = true;
+        console.log('selectedMark', this.selectedMark)
+      });
   }
 
   openAboutMap() {

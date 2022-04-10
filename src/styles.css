@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap);
+@import "../src/assets/scss/_main_global.scss";
 
 
 /* Default styles */
@@ -184,7 +185,7 @@ h6 {
 
 [class*="__container"] {
   max-width: 1200px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   margin: 0 auto;
 }
 
@@ -269,11 +270,6 @@ h6 {
 
 .site-pages-block-title span {
   display: inline-block;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #00000080;
   padding-bottom: 15px;
 }
 
@@ -298,12 +294,11 @@ h6 {
   top: 0px;
   left: calc(100% - 40% + 1px);
   width: 40%;
-  background-color: #ffffffe0;
+  background-color: #0519454a;
   height: 100%;
   overflow: auto
 }
 
-.map-about::before,
 .map-about-text::before,
 .map-selected::before {
   content: "";
@@ -330,24 +325,26 @@ h6 {
 .map-selected .map-selected_title {
   padding-top: 15px;
   padding-bottom: 15px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000;
 }
 
 .map-about-text span,
 .map-selected .map-selected_desk {
   display: inline-block;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 19px;
-  color: #00000080;
   padding: 15px;
   padding-top: 0px;
   padding-left: 0px;
+}
+
+
+.map-selected_url,
+.map-selected_desk,
+.map-about-text span,
+.map-about-text p {
+  font-size: 15px;
+  /* color: #0a3fb4; */
+  color: #fff;
+  font-weight: 500;
 }
 
 .map-selected .map-selected_img {
@@ -359,7 +356,6 @@ h6 {
 
 .map-selected .map-selected_url {
   display: -webkit-box;
-  color: #000;
   margin-bottom: 25px;
   overflow: hidden;
   white-space: normal;
@@ -392,7 +388,13 @@ h6 {
   left: 0px;
 }
 
+
+.map-selected_title, 
 .map-about-text h2 {
+  font-size: 20px;
+  /* color: #0a3fb4; */
+  color: #fff;
+  font-weight: 500;
   padding-top: 40px;
 }
 
@@ -407,7 +409,7 @@ h6 {
 }
 
 agm-map {
-  height: 400px
+  height: 100%;
 }
 
 a[href^="http://maps.google.com/maps"] {

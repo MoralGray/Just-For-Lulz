@@ -46,7 +46,10 @@
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "url-slug": "^3.0.2",
-    "zone.js": "~0.11.3"
+    "zone.js": "~0.11.3",
+    "sass": "^1.43.4",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^12.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.3",
