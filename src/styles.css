@@ -321,6 +321,24 @@ h6 {
   margin: auto;
 }
 
+.map-about-text-content input {
+  background-color: #0000;
+  border-bottom: 1px solid #ffffff75;
+  margin-bottom: 15px;
+}
+
+.map-about-text-content input::placeholder {
+  color: #fff;
+}
+
+.map-about-text-content button {
+  background-color: #0000;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
 .map-about-text h2,
 .map-selected .map-selected_title {
   padding-top: 15px;
@@ -366,10 +384,12 @@ h6 {
   text-underline-offset: 5px;
   padding-bottom: 4px;
   word-break: break-word;
+  z-index: 10;
+  border-bottom: 1px solid #0000;
 }
 
 .map-selected .map-selected_url:hover {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #051945;
 }
 
 .map-about {
@@ -389,7 +409,7 @@ h6 {
 }
 
 
-.map-selected_title, 
+.map-selected_title,
 .map-about-text h2 {
   font-size: 20px;
   /* color: #0a3fb4; */
