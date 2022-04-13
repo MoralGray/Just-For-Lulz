@@ -20,6 +20,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'docs',
+    loadChildren: () => import('./pages/docs/page.module').then(m => m.DocsPageModule),
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/home/page.module').then(m => m.HomePageModule),
   },
