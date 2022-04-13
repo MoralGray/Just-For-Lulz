@@ -1,0 +1,184 @@
+/* Default styles */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+  }
+  
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+  
+:focus,
+:active {
+    outline: none;
+}
+  
+input,
+input:focus,
+input:active,
+select,
+select:focus,
+select:active,
+textarea,
+textarea:focus,
+textarea:active,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+button {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    outline: none;
+    box-shadow: none !important;
+    font-size: inherit;
+}
+  
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px) {
+  
+    input,
+    input:focus,
+    input:active,
+    select,
+    select:focus,
+    select:active,
+    textarea,
+    textarea:focus,
+    textarea:active,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    button {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+      outline: none;
+      box-shadow: none !important;
+      font-size: inherit;
+    }
+}
+  
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+  
+input:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+  
+a:focus,
+a:active {
+    outline: none;
+}
+  
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+}
+  
+html,
+body {
+    height: 100%;
+}
+  
+body {
+    font-family: "Heebo", sans-serif;
+    line-height: 1.4;
+    color: #020c22;
+    font-weight: 400;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+  
+input::-ms-clear {
+    display: none;
+}
+  
+button {
+    cursor: pointer;
+}
+  
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+  
+a,
+a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: none;
+}
+  
+ul li {
+    list-style: none;
+}
+  
+img {
+    vertical-align: top;
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+  
+[class*="__container"] {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}

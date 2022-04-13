@@ -1,0 +1,45 @@
+.all-press {
+    padding-top: 50px;
+}
+
+.press-card {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid #e2e3e4;
+
+    img {
+        max-height: 140px;
+        max-width: 140px;
+
+        @media screen and (max-width: 560px) {
+            display: none;
+        }
+    }
+}
+
+.press-card__content {
+    max-width: 400px;
+
+    h4 {
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #020c22;
+    }
+
+    p {
+        margin-bottom: 25px;
+        font-size: 17px;
+    }
+
+    .contacts-item {
+        a {
+            font-size: 24px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+
+}

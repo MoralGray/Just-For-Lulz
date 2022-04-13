@@ -1,0 +1,66 @@
+//reset
+@import "./reset";
+
+//elements
+@import "./elements/border-btn";
+@import "./elements/titles";
+
+//blocks
+@import "./blocks/top-block";
+@import "./blocks/contacts";
+@import "./blocks/official-services";
+@import "./blocks/feedback";
+@import "./blocks/promoted";
+@import "./blocks/press-cards";
+
+.contacts-page__container,
+.top-block__container,
+.promoted__container {
+    margin-left: 140px;
+    max-width: 720px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media screen and (max-width: 990px) {
+        margin-left: auto;
+    }
+
+    @media screen and (max-width: 730px) {
+        max-width: 700px;
+    }
+}
+
+
+.contacts-page {
+    padding-top: 128px;
+    padding-bottom: 93px;
+    background-color: #f8f8f8;
+
+    @media screen and (max-width: 730px) {
+        padding-bottom: 30px;
+    }
+
+    section:not(:last-child) {
+        padding-bottom: 75px;
+    }
+
+    [class*="__text"] a {
+        color: #020c22;
+        border-bottom: 1px solid #bcc2eb;
+        transition: border-color .4s cubic-bezier(.23,1,.32,1);
+
+        &:hover {
+            border-color: #0a3fb4;
+            transition: border-color .4s cubic-bezier(.23,1,.32,1);
+        }
+    }
+
+    .separate {
+        margin-left: -50%;
+        border-top: 1px solid #e2e3e4;
+
+        @media screen and (max-width: 730px) {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.contacts {
+
+    &__title {
+        margin-bottom: 45px;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+}
+
+
+.contacts__text > * + * {
+    margin-top: 30px;
+}
+
+.contacts {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 25px;
+    }
+}
+
+.contacts-item {
+    width: 50%;
+
+    @media screen and (max-width: 730px) {
+        width: 100%;
+    }
+
+    a {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #181c40;
+        text-transform: uppercase;
+    }
+
+    p {
+        max-width: 320px;
+        font-size: 15px;
+        color: #606778;
+    }
+}

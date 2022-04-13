@@ -1,0 +1,116 @@
+.feedback {
+    padding-top: 75px;
+
+    &__title {
+        margin-bottom: 45px;
+    }
+}
+
+.feedback-form {
+    &__text p {
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    &__description {
+        margin-bottom: 30px;
+        font-size: 12px;
+        color: #606778;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        
+        @media screen and (max-width: 730px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    label,
+    textarea,
+    input {
+        display: block;
+        width: 100%;
+    }
+
+    textarea,
+    input {
+        padding: 8px;
+        font-size: 15px;
+        line-height: 21px;
+        color: #020c22;
+
+        border: 1px solid #e2e3e4;
+        border-radius: 2px;
+        transition: border-color .4s cubic-bezier(.23,1,.32,1),background .4s cubic-bezier(.23,1,.32,1);
+
+        &:hover,
+        &:focus {
+            border-color: #28dcb4;
+            transition: border-color .4s cubic-bezier(.23,1,.32,1),background .4s cubic-bezier(.23,1,.32,1);
+        }
+    }
+
+    input {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    label {
+        line-height: 27px;
+        font-size: 13px;
+        color: #606778;
+    }
+}
+
+.feedback-form__group .feedback-form__row {
+    margin-bottom: 13px;
+}
+
+.feedback-form__row > label + label {
+    margin-left: 30px;
+
+    @media screen and (max-width: 730px) {
+        margin-left: 0;
+        margin-top: 13px;
+    }
+}
+
+.feedback-form label.border-btn {
+    max-width: 220px;
+    font-size: 15px;
+    color: #606778;
+    height: 40px;
+    line-height: 40px;
+
+    @media screen and (max-width: 730px) {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover,
+    &:focus {
+        color: #0a3fb4;
+        border-color: #0a3fb4;
+    }
+}
+
+.feedback-form .border-btn {
+    @media screen and (max-width: 730px) {
+        width: 100%;
+    }
+}

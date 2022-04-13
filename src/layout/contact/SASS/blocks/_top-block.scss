@@ -1,0 +1,29 @@
+.top-block {
+    position: fixed;
+    width: 100%;
+    background-color: #fefefe;
+    z-index: 101;
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    li:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.top-block li a {
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    font-size: 15px;
+    color: #414c64;
+    transition: color 1.4s cubic-bezier(0.23, 1, 0.32 ,1);
+
+    &:hover {
+        color: #0a3fb4;
+    }
+}
