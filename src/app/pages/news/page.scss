@@ -225,3 +225,108 @@ button {
 .footer__license {
     margin-top: 320px;
 }
+
+@media (max-width: 860px) and (min-width: 731px) {
+    .container {
+      padding-left: 30px;
+    }
+}
+  
+@media (max-width: 730px) {
+    .container {
+      padding: 0 20px;
+    }
+    .menu__list {
+      display: none;
+    }
+    .menu {
+      background: #03153a;
+    }
+    .menu__media {
+      display: block;
+      width: 80%;
+      padding: 14px 0;
+      line-height: 25px;
+      font-size: 20px;
+      color: #647290;
+    }
+    .burger_menu {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      //background-image: url(../img/menu.svg);
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      width: 18px;
+      height: 18px;
+    }
+    .content {
+        margin: 0 0 43px;
+        background: #fefefe;
+    }
+    .form__dropdown {
+        display: block;
+    }
+    .form__title {
+        width: 100%;
+    }
+    .form__show {
+        width: 100%;
+        margin-top: 27px;
+        background-color: #fefefe;
+    }
+    .content__responsible {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .content__responsible-media, .content__topic-media {
+        margin-top: 5px;
+    }
+    .content__topic {
+        display: block;
+    }
+    .content__show {
+        width: 100%;
+    }
+    .footer__item {
+        display: none;
+    }
+    .footer__media {
+        display: block;
+    }
+    .footer {
+        padding-top: 26px 0 35px 0;
+    }
+    .footer__title {
+        margin: 22px 0 0 0;
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .footer__subtitle {
+        font-size: 13px;
+        padding-top: 4px;
+        color: #909cb4;
+    }
+    .footer__line {
+        margin: 25px 0 20px -20px;
+        background: #282e3c;
+        width: 837px;
+        height: 1px;
+    }
+    .footer__list a {
+        color: #fefefe;
+        font-size: 17px;
+    }
+
+    .footer__list li {
+        margin-bottom: 17px;
+    }
+    .footer__license, .footer__admin, .footer__year {
+        margin: 0;
+        color: #606778;
+        font-size: 13px;
+    }
+    .footer__admin {
+     margin-top: 20px;
+    }
+}

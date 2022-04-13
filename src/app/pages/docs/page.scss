@@ -1,0 +1,142 @@
+html,
+body {
+    height: 100%;
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 860px;
+    padding-left: 160px;
+}
+
+.main {
+    margin-top: 68px;
+    background: #f8f8f8;
+}
+
+.main__text {
+    margin-top: 57px;
+}
+
+.main__title {
+    margin-bottom: 45px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.main__subtitle p {
+    margin-bottom: 30px;
+    color: #020c22;
+    font-size: 20px;
+}
+
+.main__subtitle-small {
+    font-size: 15px;
+    color: #606778;
+    line-height: 1.4;
+}
+
+.main__line {
+    width: 893px;
+    margin: 50px 0px;
+    height: 1px;
+    background: #e2e3e4;
+}
+
+.main__download {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: #0a3fb4;
+}
+
+.main__download-size {
+    color: #606778;
+    font-size: 13px;
+}
+
+.chapter {
+    background: #f8f8f8;
+}
+
+.chapter__title {
+    margin-bottom: 45px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.chapter__subtitle {
+    margin-bottom: 55px;
+    line-height: 1.1;
+    font-size: 24px;
+}
+
+.chapter__button {
+    position: relative;
+    width: 100%;
+    height: 54px;
+    padding-left: 10px;
+    text-align: left;
+    background: #fefefe;
+    margin-right: 30px;
+    border: 1px solid #d3cfcf;
+    color: #4a5469;
+}
+
+.chapter__button:after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid;
+    border-color: transparent #a6aebf  #a6aebf  transparent;
+    transform: rotate(-45deg);
+}
+
+.chapter__list {
+    margin-bottom: 26px;
+}
+
+.chapter__button {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 38px;
+    align-items: center;
+}
+
+.chapter__button span:last-child {
+    font-size: 13px;
+}
+
+.chapter__second button {
+    color: #4a5469;
+}
+
+@media (max-width: 876px) {
+    .container {
+      padding: 0 10px 0 20px;
+      max-width: 730px;
+    }
+}
+  
