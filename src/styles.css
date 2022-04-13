@@ -286,6 +286,13 @@ h6 {
   overflow: hidden;
 }
 
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 .map-about-text,
 .map-selected {
   position: absolute;
