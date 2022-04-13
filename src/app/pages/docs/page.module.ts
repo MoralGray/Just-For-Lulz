@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {DocsPageComponent} from './page';
+import {ChavoItemComponent} from '../../components/chavo/item.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import {DocsPageComponent} from './page';
       }
     ]),
   ],
-  declarations: [DocsPageComponent]
+  declarations: [DocsPageComponent, ChavoItemComponent]
 })
 export class DocsPageModule {
 
