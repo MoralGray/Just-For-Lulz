@@ -565,3 +565,21 @@ a[href^="https://maps.google.com/maps"] {
 .footer__license {
   margin-top: 320px;
 }
+
+.circle {
+  background-color: rgb(209, 202, 202);
+  opacity: 0.8;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  transition: all 0.5s ease;
+  position: absolute;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.circle.active {
+  transform: scale(3);
+  opacity: 0;
+  z-index: 10000;
+}

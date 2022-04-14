@@ -34,6 +34,23 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.loadPages();
     // this.getUser();
+    this.cursorClick();
+  }
+
+  cursorClick() {
+    window.addEventListener('click', function (e) {
+      const circle = document.createElement('div');
+      circle.style.top = (e.pageY - 5) + "px";
+      circle.style.left = (e.pageX - 5) + "px";
+      circle.className = 'circle';
+      setTimeout(function () {
+        circle.classList.add("active");
+      }, 0);
+      circle.addEventListener("transitionend", function () {
+        circle.remove();
+      });
+      document.body.appendChild(circle);
+    });
   }
 
   loadPages() {
