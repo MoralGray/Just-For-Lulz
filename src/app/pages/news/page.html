@@ -18,63 +18,63 @@
 
 <app-news-youtube></app-news-youtube> -->
 
-    <section class="menu">
-      <div class="container">
-        <ul class="menu__list">
-          <li><a href="#">Все поручения</a></li>
-          <li><a href="#">Ближайшие сроки</a></li>
-          <li><a href="#">Снятые с контроля</a></li>
-          <li><a href="#">Справка</a></li>
+<section class="menu">
+  <div class="container">
+    <ul class="menu__list">
+      <ng-container *ngFor="let filter of filters">
+        <li><a href="#" (click)="filterSort(filter)">{{filter}}</a></li>
+      </ng-container>
+    </ul>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    <form class="form">
+      <div class="form__label">
+        <label>Ответственные лица, организации или тематика поручений</label>
+      </div>
+
+      <div class="form__dropdown">
+        <button class="form__title" type="button">Все поручения</button>
+        <button class="form__show" type="button">Показать</button>
+      </div>
+    </form>
+  </div>
+  <div class="line"></div>
+
+  <div class="container">
+    <ng-container *ngFor="let field of fieldsSotred">
+      <div class="content__text">
+        <ul class="content__title">
+          <li>{{field?.title}}</li>
         </ul>
-      </div>
-    </section>
+        <ul class="content__subtitle">
+          <li>б)разработать единый подход к организации повышения квалификации
+            педагогических работников, осуществляющих воспитательную работу
+            в общеобразовательных и профессиональных образовательных
+            организациях, и организовывать повышение их квалификации
+            с применением такого подхода, в том числе на базе Международного
+            детского центра «Артек».</li>
+          <li>Доклад – до 15 января и до 15 апреля 2022г.</li>
+          <li>Ответственный: Кравцов С.С.</li>
+        </ul>
 
-    <section class="content">
-      <div class="container">
-        <form class="form">
-          <div class="form__label">
-            <label>Ответственные лица, организации или тематика поручений</label>
-          </div>
-
-          <div class="form__dropdown">
-            <button class="form__title" type="button">Все поручения</button>
-            <button class="form__show" type="button">Показать</button>
-          </div>
-        </form>
-      </div>
-      <div class="line"></div>
-
-      <div class="container">
-        <div class="content__text">
-          <ul class="content__title">
-            <li>Пр-1845, п.2б</li>
-            <li>Исполнение к 15 апреля 2022 года</li>
-          </ul>
-          <ul class="content__subtitle">
-            <li>б)разработать единый подход к организации повышения квалификации
-              педагогических работников, осуществляющих воспитательную работу
-              в общеобразовательных и профессиональных образовательных
-              организациях, и организовывать повышение их квалификации
-              с применением такого подхода, в том числе на базе Международного
-              детского центра «Артек».</li>
-            <li>Доклад – до 15 января и до 15 апреля 2022г.</li>
-            <li>Ответственный: Кравцов С.С.</li>
-          </ul>
-
-          <div class="content__responsible">
-            <div>Ответственный</div>
-            <div><a href="#">Кравцов Сергей Сергеевич</a></div>
-          </div>
-
-          <div class="content__topic">
-            <div>Тематика</div>
-            <div>
-              <a href="#">Профессиональное образование</a>,
-              <a href="#">Дети</a>,
-              <a href="#">Школа</a>
-            </div>
-          </div>
-          <button class="content__show" type="button">Показать предыдущие материалы</button>
+        <div class="content__responsible">
+          <div>Ответственный</div>
+          <div><a href="#">Кравцов Сергей Сергеевич</a></div>
         </div>
+
+        <div class="content__topic">
+          <div>Тематика</div>
+          <div>
+            <a href="#">Профессиональное образование</a>,
+            <a href="#">Дети</a>,
+            <a href="#">Школа</a>
+          </div>
+        </div>
+        <button class="content__show" type="button">Показать предыдущие материалы</button>
       </div>
-    </section>
+    </ng-container>
+  </div>
+</section>
