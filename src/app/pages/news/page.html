@@ -47,10 +47,10 @@
     <ng-container *ngFor="let field of fieldsSotred">
       <div class="content__text">
         <ul class="content__title">
-          <li>{{field?.title}}</li>
+          <li><a href="#">{{field?.title}}</a></li>
         </ul>
         <ul class="content__subtitle">
-          <li>б)разработать единый подход к организации повышения квалификации
+          <li>б) разработать единый подход к организации повышения квалификации
             педагогических работников, осуществляющих воспитательную работу
             в общеобразовательных и профессиональных образовательных
             организациях, и организовывать повышение их квалификации
@@ -73,8 +73,31 @@
             <a href="#">Школа</a>
           </div>
         </div>
-        <button class="content__show" type="button">Показать предыдущие материалы</button>
+        
       </div>
     </ng-container>
+    <button class="content__show" type="button">Показать предыдущие материалы</button>
   </div>
 </section>
+
+<button class="info__button" type="button">Перейти к поручениям Президента</button>
+
+<div class="error">
+  <div class="container">
+
+    <div class="error__block">
+      <div class="error__image">
+        <img src="assets/images/promoted.jpg" alt="Ошибка">
+      </div>
+  
+      <div class="error__text">
+        Page not found Page not found Page not found Page not found Page not found Page not found 
+        Page not found Page not found Page not found 
+        Page not found Page not found Page not found 
+      </div>
+  
+      <button class="error__button">error</button>
+    </div>
+  </div>
+    
+</div>
