@@ -124,11 +124,6 @@ section {
   display: block;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: "Heebo", sans-serif;
   line-height: 1;
