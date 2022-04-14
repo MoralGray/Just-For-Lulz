@@ -1,75 +1,80 @@
-<div class="promoted wrap"><a class="promoted__link" href="#">
+<div class="main-page">
+
+  <div class="promoted">
     <div class="promoted__container">
-      <div class="promoted__left">
-        <h3 class="promoted__title">Первая выкатка. Закажет ли ОП лобстеры?</h3>
-        <div class="promoted__date">10 апреля 2022 года</div>
-      </div>
-      <div class="promoted__right">
-        <div class="promoted__preview"></div>
-      </div>
-    </div>
-  </a></div>
-<div class="main">
-  <div class="wrap">
-    <div class="masonry">
-      <a class="masonry__item masonry__item--large" href="#">
-        <h3 class="masonry__title">Пыня думает, что чет все не серьезно нихуя</h3>
-        <div class="masonry__date">5 апреля 2022 года, 17:35</div>
-        <div class="masonry__preview"></div>
-      </a>
-      <div class="masonry__row">
-        <a class="masonry__item" href="#">
-          <h3 class="masonry__title">Принят указ переименовать Киев в Жировск</h3>
-          <div class="masonry__date">5 апреля 2022 года, 17:35</div>
-          <div class="masonry__preview"></div>
-        </a><a class="masonry__item" href="#">
-          <h3 class="masonry__title">Совещание по развитию агропромышленного и рыбохозяйственного комплексов
-          </h3>
-          <div class="masonry__date">5 апреля 2022 года, 17:35</div>
-          <div class="masonry__preview"></div>
-        </a></div>
-    </div>
-  </div>
-  <div class="section section--previous wrap"><a class="section__header" href="#">
-      <div class="section__title">Президент России</div>
-    </a>
-    <div class="news">
-      <div class="news__row">
-        <a class="news__item" href="#">
-          <div class="news__title">Телефонный разговор с Президентом Азербайджана Ильхамом Алиевым</div>
-          <div class="news__date">9 апреля 2022 года, 15:30</div>
-        </a>
-        <a class="news__item" href="#">
-          <div class="news__title">Телефонный разговор с Президентом Туркменистана Сердаром Бердымухамедовым
+      <a href="#" class="promoted__wrapper">
+        <div class="promoted__block">
+          <div class="promoted__content">
+            <h3 class="promoted__title">Меры поддержки в условиях санкций</h3>
+            <span>10 апреля 2022 года</span>
           </div>
-          <div class="news__date">9 апреля 2022 года, 15:30</div>
-        </a></div>
-      <div class="news__row">
-        <a class="news__item" href="#">
-          <div class="news__title">Открыта аккредитация журналистов на освещение мероприятий, посвящённых 77-й
-            годовщине Победы в Великой Отечественной войне 1941–1945 годов</div>
-          <div class="news__date">9 апреля 2022 года, 15:30</div>
-        </a><a class="news__item" href="#">
-          <div class="news__title">Телефонный разговор с Премьер-министром Венгрии Виктором Орбаном</div>
-          <div class="news__date">9 апреля 2022 года, 15:30</div>
-        </a></div>
-      <div class="news__row"><a class="news__item" href="#">
-          <div class="news__title">Телефонный разговор с Премьер-министром Венгрии Виктором Орбаном</div>
-          <div class="news__date">9 апреля 2022 года, 15:30</div>
-        </a><a class="news__item" href="#">
-          <div class="news__title">Телефонный разговор с Премьер-министром Венгрии Виктором Орбаном</div>
-          <div class="news__date">9 апреля 2022 года, 15:30</div>
-        </a></div>
+          <img src="../../../assets/images/promoted.jpg" alt="">
+        </div>
+      </a>
     </div>
   </div>
-  <div class="section section--map section--previous wrap">
-    <div class="section__header section__header--icon">
-      <div class="section__title">Карта сатирической партии Поехали</div>
+
+  <div class="main">
+    <div class="wrap">
+      <div class="masonry">
+        <a class="masonry__item masonry__item--large" href="#">
+          <h3 class="masonry__title">Пыня думает, что чет все не серьезно нихуя</h3>
+          <div class="masonry__date">5 апреля 2022 года, 17:35</div>
+          <div class="masonry__preview"></div>
+        </a>
+        <div class="masonry__row">
+          <a class="masonry__item" href="#">
+            <h3 class="masonry__title">Принят указ переименовать Киев в Жировск</h3>
+            <div class="masonry__date">5 апреля 2022 года, 17:35</div>
+            <div class="masonry__preview"></div>
+          </a><a class="masonry__item" href="#">
+            <h3 class="masonry__title">Совещание по развитию агропромышленного и рыбохозяйственного комплексов
+            </h3>
+            <div class="masonry__date">5 апреля 2022 года, 17:35</div>
+            <div class="masonry__preview"></div>
+          </a></div>
+      </div>
     </div>
-    <div class="map">
-      <div class="map__row">
-        <agm-map [latitude]="mapEurope[0]" [longitude]="mapEurope[1]" [zoom]="3" [disableDefaultUI]="true"
-          [styles]="mapTheme" (mapClick)="openMarkerModal($event)">
+    <div class="section section--previous wrap"><a class="section__header" href="#">
+        <div class="section__title">Президент России</div>
+      </a>
+      <div class="news">
+        <div class="news__row">
+          <a class="news__item" href="#">
+            <div class="news__title">Телефонный разговор с Президентом Азербайджана Ильхамом Алиевым</div>
+            <div class="news__date">9 апреля 2022 года, 15:30</div>
+          </a>
+          <a class="news__item" href="#">
+            <div class="news__title">Телефонный разговор с Президентом Туркменистана Сердаром Бердымухамедовым
+            </div>
+            <div class="news__date">9 апреля 2022 года, 15:30</div>
+          </a></div>
+        <div class="news__row">
+          <a class="news__item" href="#">
+            <div class="news__title">Открыта аккредитация журналистов на освещение мероприятий, посвящённых 77-й
+              годовщине Победы в Великой Отечественной войне 1941–1945 годов</div>
+            <div class="news__date">9 апреля 2022 года, 15:30</div>
+          </a><a class="news__item" href="#">
+            <div class="news__title">Телефонный разговор с Премьер-министром Венгрии Виктором Орбаном</div>
+            <div class="news__date">9 апреля 2022 года, 15:30</div>
+          </a></div>
+        <div class="news__row"><a class="news__item" href="#">
+            <div class="news__title">Телефонный разговор с Премьер-министром Венгрии Виктором Орбаном</div>
+            <div class="news__date">9 апреля 2022 года, 15:30</div>
+          </a><a class="news__item" href="#">
+            <div class="news__title">Телефонный разговор с Премьер-министром Венгрии Виктором Орбаном</div>
+            <div class="news__date">9 апреля 2022 года, 15:30</div>
+          </a></div>
+      </div>
+    </div>
+    <div class="section section--map section--previous wrap">
+      <div class="section__header section__header--icon">
+        <div class="section__title">Карта сатирической партии Поехали</div>
+      </div>
+      <div class="map">
+        <div class="map__row">
+          <agm-map [latitude]="mapEurope[0]" [longitude]="mapEurope[1]" [zoom]="3" [disableDefaultUI]="true"
+            [styles]="mapTheme" (mapClick)="openMarkerModal($event)">
 
           <!-- В agm_map v 3.beta есть ошибка с $event, возвращает не евент, а "с". -->
           <!-- <agm-fullscreen-control *ngIf="!mapMarkSelectedShow"></agm-fullscreen-control> -->
@@ -129,7 +134,7 @@
             <button>Готово!</button>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>
@@ -193,7 +198,7 @@
               <div class="sites__button"></div>
             </div>
           </a></div>
+        </div>
       </div>
     </div>
-  </div>
 </div>
