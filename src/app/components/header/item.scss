@@ -9,7 +9,7 @@
     z-index: 1000;
 
     @media screen and (max-width: 730px) {
-      position: relative;
+      position: static;
       top: 0;
     }
 
@@ -175,3 +175,15 @@
     display: block;
   }
 }
+
+// .is-active {
+//   background: #020c22;
+
+//   .header__logotype {
+//     color: #2ac1a0;
+//   }
+
+//   .toggle-more i {
+//     background-image: url(../../../assets/icons/portal_green.svg);
+//   }
+// }
