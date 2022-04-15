@@ -9,7 +9,7 @@
     z-index: 1000;
 
     @media screen and (max-width: 730px) {
-      position: static;
+      position: relative;
       top: 0;
     }
 
@@ -122,7 +122,7 @@
     display: none;
   }
 
-  i {
+  span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -138,30 +138,32 @@
   }
 }
 
-.toggle-aside:hover i,
-.toggle-aside:focus i {
+.toggle-aside:hover span,
+.toggle-aside:focus span {
   background-image: url(../../../assets/icons/portal_green.svg);
   background-size: 16px 16px;
   width: 16px;
   height: 16px;
 }
 
-.toggle-aside:focus i {
+.toggle-aside:focus span {
   background-image: url(../../../assets/icons/portal_white.svg);
 }
 
 .toggle-more {
   display: none;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 
   width: 60px;
   height: 60px;
 
-  i {
+  span {
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     display: block;
     width: 18px;

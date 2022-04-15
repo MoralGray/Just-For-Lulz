@@ -545,16 +545,25 @@ a[href^="https://maps.google.com/maps"] {
 /* footer */
 
 .footer {
+  padding: 55px 0 55px 0;
   background: #020c22;
-  padding: 54px 0 56px 0;
+  color: #909cb4;
+  font-size: 13px;
+}
+
+.footer__links a {
+  color: #909cb4;
+  transition: color .4s cubic-bezier(.23,1,.32,1);
+}
+
+.footer__links a:hover,
+.footer__links a:focus {
+  color: #fefefe;
 }
 
 .footer__row {
   display: flex;
   flex-direction: column;
-  line-height: 17px;
-  color: #909cb4;
-  font-size: 13px;
 }
 
 .footer__titles,
@@ -569,7 +578,6 @@ a[href^="https://maps.google.com/maps"] {
 
 .footer__links {
   position: relative;
-  color: #909cb4;
 }
 
 .footer__title,
@@ -590,16 +598,6 @@ a[href^="https://maps.google.com/maps"] {
   color: #f0f4f8;
 }
 
-.footer__links a {
-  color: #909cb4;
-  transition: color .4s cubic-bezier(.23,1,.32,1);
-}
-
-.footer__links a:hover,
-.footer__links a:active {
-  color: #fefefe;
-}
-
 .footer__list li:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -612,7 +610,7 @@ a[href^="https://maps.google.com/maps"] {
   position: relative;
 }
 
-.footer__w-icon i {
+.footer__w-icon span {
   position: absolute;
   top: 0;
   left: -30px;
@@ -624,35 +622,35 @@ a[href^="https://maps.google.com/maps"] {
   background-repeat: no-repeat;
 }
 
-.footer__search i {
+.footer__search span {
   background-image: url(./assets/icons/footersearch.svg);
   background-size: 13px 13px;
 }
 
-.footer__smi i {
+.footer__smi span {
   background-image: url(./assets/icons/smi.svg);
   background-size: 14px 14px;
 }
 
-.footer__special i {
+.footer__special span {
   background-image: url(./assets/icons/special.svg);
   background-size: 12px 9px;
 }
 
-.footer__search a:hover i {
+.footer__search a:hover span {
   background-image: url(./assets/icons/footersearch_hover.svg);
 }
 
-.footer__smi a:hover i {
+.footer__smi a:hover span {
   background-image: url(./assets/icons/smi_hover.svg);
 }
 
-.footer__special a:hover i {
+.footer__special a:hover span {
   background-image: url(./assets/icons/special_hover.svg);
 }
 
 @media screen and (max-width: 770px) {
-  .footer__w-icon i {
+  .footer__w-icon span {
     display: none;
   }
 }
@@ -681,6 +679,78 @@ a[href^="https://maps.google.com/maps"] {
   margin-bottom: 8px;
 }
 
+/* footer mobile */
+
+@media screen and (max-width: 730px) {
+  .footer {
+    padding-top: 0;
+    padding-bottom: 35px;
+  }
+
+  .footer__row {
+    display: none;
+  }
+
+  .footer__mob {
+    display: block !important;
+  }
+
+  .footer__list li:not(:last-child) {
+    margin-bottom: 22px;
+  }
+}
+
+.footer__mob {
+  display: none;
+  font-size: 12px;
+  color: #909cb4;
+}
+
+.footer__mob-section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #282e3c;
+}
+
+.footer__mob-section a {
+  color: #fefefe;
+  font-size: 15px;
+}
+
+.footer__mob-logo {
+  margin-bottom: 22px;
+}
+
+.footer__mob-logo span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/icons/smalllogo.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.footer__mob-title {
+  color: #fefefe;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.footer__mob-copy {
+  padding-top: 27px;
+  color: #606778;
+}
+
+.footer__mob-copy a {
+  color: #606778;
+}
+
+.footer__mob-copy > * + * {
+  margin-top: 20px;
+}
+
+/* circle (хз откуда это, возможно нужно удалить) */
+
 .circle {
   background-color: rgb(209, 202, 202);
   opacity: 0.8;
@@ -698,3 +768,4 @@ a[href^="https://maps.google.com/maps"] {
   opacity: 0;
   z-index: 10000;
 }
+
