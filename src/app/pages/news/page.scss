@@ -4,13 +4,13 @@
     &__dropdown {
         display: flex;
     }
-    
+
     &__label {
         font-size: 13px;
         line-height: 27px;
         color: #606778;
     }
-    
+
     &__title {
         position: relative;
         width: 488px;
@@ -26,7 +26,7 @@
     &__title:hover {
         border: 1px solid #2ac1a0;
     }
-    
+
     &__title:after {
         content: '';
         position: absolute;
@@ -38,7 +38,7 @@
         border-color: transparent #7c7a7a #7c7a7a transparent;
         transform: rotate(45deg);
     }
-    
+
     &__show {
         width: 160px;
         border: 1px solid #d3cfcf;
@@ -65,7 +65,7 @@
         color: #989899;
         border-bottom: 1px solid #e2e3e4;
     }
-    
+
     &__line:last-child {
         border: none;
     }
@@ -126,7 +126,7 @@
     &__show:hover{
         background-color: #28dcb4;
     }
-    
+
 }
 
 .container {
@@ -151,7 +151,7 @@
       padding-left: 30px;
     }
 }
-  
+
 @media (max-width: 730px) {
     .container {
       padding: 0 20px;
@@ -174,7 +174,7 @@
       position: absolute;
       top: 22px;
       right: 22px;
-      background-image: url("../../../assets/icons/menu.svg");
+      // background-image: url("../../../assets/icons/menu.svg");
       background-repeat: no-repeat;
       background-size: 18px 18px;
       width: 18px;
