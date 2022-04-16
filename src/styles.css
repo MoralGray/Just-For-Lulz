@@ -126,7 +126,7 @@ section {
 
 body {
   font-family: "Heebo", sans-serif;
-  line-height: 1.2;
+  line-height: 1.4;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -164,6 +164,7 @@ ul li {
 
 img {
   vertical-align: top;
+  object-fit: cover;
 }
 
 h1,
@@ -649,7 +650,7 @@ a[href^="https://maps.google.com/maps"] {
   background-image: url(./assets/icons/special_hover.svg);
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 810px) {
   .footer__w-icon span {
     display: none;
   }
