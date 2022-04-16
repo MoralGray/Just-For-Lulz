@@ -9,11 +9,12 @@
     z-index: 1000;
 
     @media screen and (max-width: 730px) {
-      position: relative;
+      position: static;
       top: 0;
     }
 
     &__content {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -111,7 +112,7 @@
 
 .toggle-aside {
   position: absolute;
-  left: 0;
+  top: 60px;
   left: 0;
 
   display: block;
@@ -154,7 +155,7 @@
   display: none;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -20px;
 
   width: 60px;
   height: 60px;
@@ -178,14 +179,43 @@
   }
 }
 
-// .is-active {
-//   background: #020c22;
+// add class "active" to .header to see hidden mobile menu
 
-//   .header__logotype {
-//     color: #2ac1a0;
-//   }
+.header.active {
+  background: #020c22;
+  padding-bottom: 40px;
 
-//   .toggle-more i {
-//     background-image: url(../../../assets/icons/portal_green.svg);
-//   }
-// }
+  .header__logotype {
+    color: #2ac1a0;
+  }
+
+  .toggle-more span {
+    background-image: url(../../../assets/icons/portal_green.svg);
+  }
+
+  .header__nav-mobile {
+    display: block !important;
+  }
+}
+
+.header__nav-mobile {
+  display: none;
+}
+
+.header__nav-mobile ul {
+  border-top: 1px solid #282e3c;
+}
+
+.header__nav-mobile a {
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+
+  font-size: 19px;
+  color: #fefefe;
+  border-bottom: 1px solid #282e3c;
+
+  &.lang {
+    color: #647290;
+  }
+}
