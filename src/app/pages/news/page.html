@@ -19,7 +19,7 @@
 <app-news-youtube></app-news-youtube> -->
 
 <section class="menu">
-  <div class="container">
+  <div class="menu__container">
     <ul class="menu__list">
       <ng-container *ngFor="let filter of filters">
         <li><a href="#" (click)="filterSort(filter)">{{filter}}</a></li>
@@ -29,7 +29,7 @@
 </section>
 
 <section class="content">
-  <div class="container">
+  <div class="content__container">
     <form class="form">
       <div class="form__label">
         <label>Ответственные лица, организации или тематика поручений</label>
@@ -41,9 +41,10 @@
       </div>
     </form>
   </div>
+
   <div class="line"></div>
 
-  <div class="container">
+  <div class="content__container">
     <ng-container *ngFor="let field of fieldsSotred">
       <div class="content__text">
         <ul class="content__title">
@@ -73,31 +74,33 @@
             <a href="#">Школа</a>
           </div>
         </div>
-        
+
       </div>
     </ng-container>
     <button class="content__show" type="button">Показать предыдущие материалы</button>
   </div>
 </section>
 
-<button class="info__button" type="button">Перейти к поручениям Президента</button>
+<div class="info__container">
+  <button class="info__button" type="button">Перейти к поручениям Президента</button>
+</div>
 
 <div class="error">
-  <div class="container">
+  <div class="error__container">
 
     <div class="error__block">
       <div class="error__image">
         <img src="assets/images/promoted.jpg" alt="Ошибка">
       </div>
-  
+
       <div class="error__text">
-        Page not found Page not found Page not found Page not found Page not found Page not found 
-        Page not found Page not found Page not found 
-        Page not found Page not found Page not found 
+        Page not found Page not found Page not found Page not found Page not found Page not found
+        Page not found Page not found Page not found
+        Page not found Page not found Page not found
       </div>
-  
+
       <button class="error__button">error</button>
     </div>
   </div>
-    
+
 </div>
