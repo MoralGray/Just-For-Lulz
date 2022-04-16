@@ -15,13 +15,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'contact',
-    loadChildren: () => import('./pages/contact/page.module').then(m => m.ContactPageModule),
+    path: 'docs',
+    loadChildren: () => import('./pages/docs/page.module').then(m => m.DocsPageModule),
     pathMatch: 'full'
   },
   {
-    path: 'docs',
-    loadChildren: () => import('./pages/docs/page.module').then(m => m.DocsPageModule),
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/page.module').then(m => m.ContactPageModule),
     pathMatch: 'full'
   },
   {

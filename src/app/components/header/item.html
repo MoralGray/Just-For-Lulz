@@ -7,15 +7,12 @@
 
     <div class="header__content">
 
-      <a href="#" class="header__logotype">Президент России</a>
+      <a href="#" class="header__logotype" [routerLink]="['/']">Партия "Поехали"</a>
 
       <ul class="header__nav">
-        <li><a href="#">События</a></li>
-        <li><a href="#">Структура</a></li>
-        <li><a href="#">Видео и фото</a></li>
-        <li><a href="#">Документы</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">Поиск</a></li>
+        <li><a href="#" [routerLink]="['/news']">События</a></li>
+        <li><a href="#" [routerLink]="['/docs']">Документы</a></li>
+        <li><a href="#" [routerLink]="['/contact']">Контакты</a></li>
       </ul>
 
       <a href="#" class="toggle-more"><span></span></a>
