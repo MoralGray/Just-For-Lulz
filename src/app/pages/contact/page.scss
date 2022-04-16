@@ -1,16 +1,20 @@
 .contacts-page {
-  padding-top: 128px;
   padding-bottom: 93px;
   background-color: #f8f8f8;
-  line-height: 1.4;
 
   @media screen and (max-width: 730px) {
     padding-bottom: 30px;
   }
 
-  section:not(:last-child) {
-    padding-bottom: 75px;
+  section {
+    padding-top: 60px;
+
+    &:not(:last-child) {
+      padding-bottom: 75px;
+    }
   }
+
+  .contacts
 
   [class*="__text"] a {
     color: #020c22;
@@ -33,8 +37,46 @@
   }
 }
 
-.contacts {
+.main-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+}
 
+.contacts-page .blue-title {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: #0a3fb4;
+}
+
+.border-btn {
+  display: inline-block;
+  position: relative;
+
+  padding-left: 32px;
+  padding-right: 32px;
+
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+
+  text-align: center;
+  color: #2ac1a0;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e3e4;
+
+  &:active {
+      background: #dadada;
+  }
+
+  &:hover,
+  &:focus {
+      border-color: #28dcb4;
+      transition: border-color .4s cubic-bezier(.23,1,.32,1),background .4s cubic-bezier(.23,1,.32,1);
+  }
+}
+
+.contacts {
   &__title {
     margin-bottom: 45px;
   }
@@ -68,14 +110,14 @@
   a {
     display: block;
     margin-bottom: 8px;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 600;
     line-height: 1.5;
     color: #181c40;
     text-transform: uppercase;
   }
 
-  p {
+  span {
     max-width: 320px;
     font-size: 15px;
     color: #606778;
@@ -139,7 +181,7 @@
 }
 
 .all-press {
-  padding-top: 50px;
+  margin-top: 40px;
 }
 
 .press-card {
@@ -148,6 +190,11 @@
   padding-top: 42px;
   padding-bottom: 42px;
   border-bottom: 1px solid #e2e3e4;
+
+  &:last-child {
+    border: none;
+    padding-bottom: 0;
+  }
 
   img {
     max-height: 140px;
@@ -185,12 +232,126 @@
 
 }
 
+.feedback {
+    padding-top: 75px;
+
+    &__title {
+        margin-bottom: 45px;
+    }
+}
+
+.feedback-form {
+    &__text p {
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    &__description {
+        margin-bottom: 30px;
+        font-size: 12px;
+        color: #606778;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 730px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    label,
+    textarea,
+    input {
+        display: block;
+        width: 100%;
+    }
+
+    textarea,
+    input {
+        padding: 8px;
+        font-size: 15px;
+        line-height: 21px;
+        color: #020c22;
+
+        border: 1px solid #e2e3e4;
+        border-radius: 2px;
+        transition: border-color .4s cubic-bezier(.23,1,.32,1),background .4s cubic-bezier(.23,1,.32,1);
+
+        &:hover,
+        &:focus {
+            border-color: #28dcb4;
+            transition: border-color .4s cubic-bezier(.23,1,.32,1),background .4s cubic-bezier(.23,1,.32,1);
+        }
+    }
+
+    input {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    label {
+        line-height: 27px;
+        font-size: 13px;
+        color: #606778;
+    }
+}
+
+.feedback-form__group .feedback-form__row {
+    margin-bottom: 13px;
+}
+
+.feedback-form__row > label + label {
+    margin-left: 30px;
+
+    @media screen and (max-width: 730px) {
+        margin-left: 0;
+        margin-top: 13px;
+    }
+}
+
+.feedback-form label.border-btn {
+    max-width: 220px;
+    font-size: 15px;
+    color: #606778;
+    height: 40px;
+    line-height: 40px;
+
+    @media screen and (max-width: 730px) {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover,
+    &:focus {
+        color: #0a3fb4;
+        border-color: #0a3fb4;
+    }
+}
+
+.feedback-form .border-btn {
+    @media screen and (max-width: 730px) {
+        width: 100%;
+    }
+}
+
 .top-block {
-  position: fixed;
   width: 100%;
   background-color: #fefefe;
-  z-index: 101;
-  margin-top: 60px;
 
   ul {
     display: flex;
