@@ -1,13 +1,13 @@
 <header class="header">
 <!-- add class "active" to .header to see hidden mobile menu -->
 
-  <a href="#" class="toggle-aside"><span></span></a>
+  <div class="toggle-aside" (click)="appService.showMenu()"><span></span></div>
 
   <div class="header__container">
 
     <div class="header__content">
 
-      <a href="#" class="header__logotype" [routerLink]="['/']">Партия "Поехали"</a>
+      <a class="header__logotype" [routerLink]="['/']">Партия "Поехали"</a>
 
       <ul class="header__nav">
         <li><a href="#" [routerLink]="['/news']">События</a></li>
@@ -35,4 +35,11 @@
     </ul>
   </div>
 
+  <div class="header__popup" [ngClass]="{active: appService.isMenu}">
+    <div class="header__content">
+      контент
+    </div>
+  </div>
+
 </header>
+

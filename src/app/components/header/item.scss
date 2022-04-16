@@ -21,6 +21,14 @@
     }
 }
 
+.header__popup {
+  display: none;
+}
+
+.active.header__popup {
+  display: block;
+}
+
 .header__logotype {
   display: block;
   position: relative;

@@ -15,6 +15,7 @@ export class AppService {
 
   appReady = false;
   isLoading = false;
+  isMenu = false;
 
   // metaService: MetaService;
   titleService: TitleService;
@@ -68,7 +69,9 @@ export class AppService {
 
   showLogin() {}
 
-  showMenu() {}
+  showMenu() {
+    this.isMenu = !this.isMenu;
+  }
 
   showRegister() {}
 
