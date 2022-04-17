@@ -1,7 +1,7 @@
 <header class="header">
 <!-- add class "active" to .header to see hidden mobile menu -->
 
-  <div class="toggle-aside" (click)="appService.showMenu()"><span></span></div>
+  <a class="toggle-aside" (click)="appService.showMenu()"><span></span></a>
 
   <div class="header__container">
 
@@ -35,10 +35,45 @@
     </ul>
   </div>
 
-  <div class="header__popup" [ngClass]="{active: appService.isMenu}">
-    <div class="header__content">
-      контент
+  <div class="sidebar" [ngClass]="{active: appService.isMenu}">
+
+    <div class="sidebar__content">
+
+      <div class="sidebar__title">
+        <h2>Официальные сетевые ресурсы <span>Президента России</span></h2>
+      </div>
+
+      <div class="sidebar__lang">
+        <span><a href="#">Russian</a></span>
+        <span><a href="#">English</a></span>
+      </div>
+
+      <div class="sidebar__links">
+        <ul class="sidebar__list">
+          <li><a href="#">Для СМИ</a></li>
+          <li><a href="#">Специальная версия для людей c&nbsp;ограниченными возможностями</a></li>
+          <li><a href="#">Официальный Telegram-канал</a></li>
+          <li><a href="#">Официальный Твиттер</a></li>
+          <li><a href="#">Официальный канал на YouTube</a></li>
+        </ul>
+        <ul class="sidebar__list sidebar__list--gray">
+          <li><a href="#">Конституция России</a></li>
+          <li><a href="#">Государственная символика</a></li>
+          <li><a href="#">Отправить письмо</a></li>
+          <li><a href="#">Президент России &mdash; гражданам школьного возраста</a></li>
+          <li><a href="#">Вируальный тур по Кремлю</a></li>
+          <li><a href="#">Владимир Путин &mdash; личный сайт</a></li>
+          <li><a href="#">Путин, 20 лет</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar__sign">
+        <p>Администрация Президента России</p>
+        <span>2022</span>
+      </div>
+
     </div>
+
   </div>
 
 </header>
